@@ -161,7 +161,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=FirstProject
+CMAKE_PROJECT_NAME:STATIC=zxx-RM-A-Template
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=D:/Program Data/STM32Cube/GCC-ARM-Tools/bin/arm-none-eabi-ranlib.exe
@@ -263,6 +263,15 @@ ProcessorCount_cmd_sysinfo:FILEPATH=ProcessorCount_cmd_sysinfo-NOTFOUND
 
 //Path to a program.
 ProcessorCount_cmd_uname:FILEPATH=ProcessorCount_cmd_uname-NOTFOUND
+
+//Value Computed by CMake
+zxx-RM-A-Template_BINARY_DIR:STATIC=D:/1DATA/CLionProjects/zxx-RM-A-Template/cmake-build-debug
+
+//Value Computed by CMake
+zxx-RM-A-Template_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+zxx-RM-A-Template_SOURCE_DIR:STATIC=D:/1DATA/CLionProjects/zxx-RM-A-Template
 
 
 ########################

@@ -12,7 +12,7 @@
   */
 #include "DJI_Motor_Task.h"
 #include "cmsis_os.h"
-
+#include "DJI_Motor_Ctrl.h"
 
 /* USER CODE BEGIN Header_DJI_Motor_Entry */
 /**
@@ -21,14 +21,19 @@
 * @retval None
 */
 /* USER CODE END Header_DJI_Motor_Entry */
-void DJI_Motor_Entry(void const * argument)
+_Noreturn void DJI_Motor_Entry(void const * argument)
 {
   /* USER CODE BEGIN DJI_Motor_Entry */
-	
+#ifdef USING_BORAD_DRIVER
+  DriverInit();
+#endif
   /* Infinite loop */
   for(;;)
   {
-		osDelay(1);  
+#ifdef USING_BORAD_DRIVER
+      MotorCtrl();
+#endif
+      osDelay(1);
   }
   /* USER CODE END DJI_Motor_Entry */
 }

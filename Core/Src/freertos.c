@@ -57,8 +57,10 @@ osThreadId Oled_TaskHandle;
 /* USER CODE END FunctionPrototypes */
 
 void StartDefaultTask(void const * argument);
-void DJI_Motor_Entry(void const * argument);
-void Oled_Task_Entry(void const * argument);
+
+_Noreturn void DJI_Motor_Entry(void const * argument);
+
+_Noreturn void Oled_Task_Entry(void const * argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -148,7 +150,7 @@ void StartDefaultTask(void const * argument)
 * @retval None
 */
 /* USER CODE END Header_DJI_Motor_Entry */
-__weak void DJI_Motor_Entry(void const * argument)
+_Noreturn __weak void DJI_Motor_Entry(void const * argument)
 {
   /* USER CODE BEGIN DJI_Motor_Entry */
   /* Infinite loop */
@@ -166,7 +168,7 @@ __weak void DJI_Motor_Entry(void const * argument)
 * @retval None
 */
 /* USER CODE END Header_Oled_Task_Entry */
-__weak void Oled_Task_Entry(void const * argument)
+_Noreturn __weak void Oled_Task_Entry(void const * argument)
 {
   /* USER CODE BEGIN Oled_Task_Entry */
   /* Infinite loop */

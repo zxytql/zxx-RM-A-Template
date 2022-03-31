@@ -116,24 +116,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named FirstProject.elf
+# Target rules for targets named zxx-RM-A-Template.elf
 
 # Build rule for target.
-FirstProject.elf: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 FirstProject.elf
-.PHONY : FirstProject.elf
+zxx-RM-A-Template.elf: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 zxx-RM-A-Template.elf
+.PHONY : zxx-RM-A-Template.elf
 
 # fast build rule for target.
-FirstProject.elf/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/build
-.PHONY : FirstProject.elf/fast
+zxx-RM-A-Template.elf/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/build
+.PHONY : zxx-RM-A-Template.elf/fast
 
 BSP/DJI_Motor_Ctrl.obj: BSP/DJI_Motor_Ctrl.c.obj
 .PHONY : BSP/DJI_Motor_Ctrl.obj
 
 # target to build an object file
 BSP/DJI_Motor_Ctrl.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/BSP/DJI_Motor_Ctrl.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/BSP/DJI_Motor_Ctrl.c.obj
 .PHONY : BSP/DJI_Motor_Ctrl.c.obj
 
 BSP/DJI_Motor_Ctrl.i: BSP/DJI_Motor_Ctrl.c.i
@@ -141,7 +141,7 @@ BSP/DJI_Motor_Ctrl.i: BSP/DJI_Motor_Ctrl.c.i
 
 # target to preprocess a source file
 BSP/DJI_Motor_Ctrl.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/BSP/DJI_Motor_Ctrl.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/BSP/DJI_Motor_Ctrl.c.i
 .PHONY : BSP/DJI_Motor_Ctrl.c.i
 
 BSP/DJI_Motor_Ctrl.s: BSP/DJI_Motor_Ctrl.c.s
@@ -149,7 +149,7 @@ BSP/DJI_Motor_Ctrl.s: BSP/DJI_Motor_Ctrl.c.s
 
 # target to generate assembly for a file
 BSP/DJI_Motor_Ctrl.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/BSP/DJI_Motor_Ctrl.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/BSP/DJI_Motor_Ctrl.c.s
 .PHONY : BSP/DJI_Motor_Ctrl.c.s
 
 BSP/bsp_buzzer.obj: BSP/bsp_buzzer.c.obj
@@ -157,7 +157,7 @@ BSP/bsp_buzzer.obj: BSP/bsp_buzzer.c.obj
 
 # target to build an object file
 BSP/bsp_buzzer.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/BSP/bsp_buzzer.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/BSP/bsp_buzzer.c.obj
 .PHONY : BSP/bsp_buzzer.c.obj
 
 BSP/bsp_buzzer.i: BSP/bsp_buzzer.c.i
@@ -165,7 +165,7 @@ BSP/bsp_buzzer.i: BSP/bsp_buzzer.c.i
 
 # target to preprocess a source file
 BSP/bsp_buzzer.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/BSP/bsp_buzzer.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/BSP/bsp_buzzer.c.i
 .PHONY : BSP/bsp_buzzer.c.i
 
 BSP/bsp_buzzer.s: BSP/bsp_buzzer.c.s
@@ -173,7 +173,7 @@ BSP/bsp_buzzer.s: BSP/bsp_buzzer.c.s
 
 # target to generate assembly for a file
 BSP/bsp_buzzer.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/BSP/bsp_buzzer.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/BSP/bsp_buzzer.c.s
 .PHONY : BSP/bsp_buzzer.c.s
 
 BSP/bsp_can.obj: BSP/bsp_can.c.obj
@@ -181,7 +181,7 @@ BSP/bsp_can.obj: BSP/bsp_can.c.obj
 
 # target to build an object file
 BSP/bsp_can.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/BSP/bsp_can.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/BSP/bsp_can.c.obj
 .PHONY : BSP/bsp_can.c.obj
 
 BSP/bsp_can.i: BSP/bsp_can.c.i
@@ -189,7 +189,7 @@ BSP/bsp_can.i: BSP/bsp_can.c.i
 
 # target to preprocess a source file
 BSP/bsp_can.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/BSP/bsp_can.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/BSP/bsp_can.c.i
 .PHONY : BSP/bsp_can.c.i
 
 BSP/bsp_can.s: BSP/bsp_can.c.s
@@ -197,7 +197,7 @@ BSP/bsp_can.s: BSP/bsp_can.c.s
 
 # target to generate assembly for a file
 BSP/bsp_can.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/BSP/bsp_can.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/BSP/bsp_can.c.s
 .PHONY : BSP/bsp_can.c.s
 
 BSP/bsp_led.obj: BSP/bsp_led.c.obj
@@ -205,7 +205,7 @@ BSP/bsp_led.obj: BSP/bsp_led.c.obj
 
 # target to build an object file
 BSP/bsp_led.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/BSP/bsp_led.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/BSP/bsp_led.c.obj
 .PHONY : BSP/bsp_led.c.obj
 
 BSP/bsp_led.i: BSP/bsp_led.c.i
@@ -213,7 +213,7 @@ BSP/bsp_led.i: BSP/bsp_led.c.i
 
 # target to preprocess a source file
 BSP/bsp_led.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/BSP/bsp_led.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/BSP/bsp_led.c.i
 .PHONY : BSP/bsp_led.c.i
 
 BSP/bsp_led.s: BSP/bsp_led.c.s
@@ -221,7 +221,7 @@ BSP/bsp_led.s: BSP/bsp_led.c.s
 
 # target to generate assembly for a file
 BSP/bsp_led.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/BSP/bsp_led.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/BSP/bsp_led.c.s
 .PHONY : BSP/bsp_led.c.s
 
 BSP/bsp_oled.obj: BSP/bsp_oled.c.obj
@@ -229,7 +229,7 @@ BSP/bsp_oled.obj: BSP/bsp_oled.c.obj
 
 # target to build an object file
 BSP/bsp_oled.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/BSP/bsp_oled.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/BSP/bsp_oled.c.obj
 .PHONY : BSP/bsp_oled.c.obj
 
 BSP/bsp_oled.i: BSP/bsp_oled.c.i
@@ -237,7 +237,7 @@ BSP/bsp_oled.i: BSP/bsp_oled.c.i
 
 # target to preprocess a source file
 BSP/bsp_oled.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/BSP/bsp_oled.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/BSP/bsp_oled.c.i
 .PHONY : BSP/bsp_oled.c.i
 
 BSP/bsp_oled.s: BSP/bsp_oled.c.s
@@ -245,7 +245,7 @@ BSP/bsp_oled.s: BSP/bsp_oled.c.s
 
 # target to generate assembly for a file
 BSP/bsp_oled.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/BSP/bsp_oled.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/BSP/bsp_oled.c.s
 .PHONY : BSP/bsp_oled.c.s
 
 BSP/bsp_servo.obj: BSP/bsp_servo.c.obj
@@ -253,7 +253,7 @@ BSP/bsp_servo.obj: BSP/bsp_servo.c.obj
 
 # target to build an object file
 BSP/bsp_servo.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/BSP/bsp_servo.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/BSP/bsp_servo.c.obj
 .PHONY : BSP/bsp_servo.c.obj
 
 BSP/bsp_servo.i: BSP/bsp_servo.c.i
@@ -261,7 +261,7 @@ BSP/bsp_servo.i: BSP/bsp_servo.c.i
 
 # target to preprocess a source file
 BSP/bsp_servo.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/BSP/bsp_servo.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/BSP/bsp_servo.c.i
 .PHONY : BSP/bsp_servo.c.i
 
 BSP/bsp_servo.s: BSP/bsp_servo.c.s
@@ -269,7 +269,7 @@ BSP/bsp_servo.s: BSP/bsp_servo.c.s
 
 # target to generate assembly for a file
 BSP/bsp_servo.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/BSP/bsp_servo.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/BSP/bsp_servo.c.s
 .PHONY : BSP/bsp_servo.c.s
 
 BSP/bsp_usart.obj: BSP/bsp_usart.c.obj
@@ -277,7 +277,7 @@ BSP/bsp_usart.obj: BSP/bsp_usart.c.obj
 
 # target to build an object file
 BSP/bsp_usart.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/BSP/bsp_usart.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/BSP/bsp_usart.c.obj
 .PHONY : BSP/bsp_usart.c.obj
 
 BSP/bsp_usart.i: BSP/bsp_usart.c.i
@@ -285,7 +285,7 @@ BSP/bsp_usart.i: BSP/bsp_usart.c.i
 
 # target to preprocess a source file
 BSP/bsp_usart.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/BSP/bsp_usart.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/BSP/bsp_usart.c.i
 .PHONY : BSP/bsp_usart.c.i
 
 BSP/bsp_usart.s: BSP/bsp_usart.c.s
@@ -293,7 +293,7 @@ BSP/bsp_usart.s: BSP/bsp_usart.c.s
 
 # target to generate assembly for a file
 BSP/bsp_usart.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/BSP/bsp_usart.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/BSP/bsp_usart.c.s
 .PHONY : BSP/bsp_usart.c.s
 
 BSP/hdc_driver.obj: BSP/hdc_driver.c.obj
@@ -301,7 +301,7 @@ BSP/hdc_driver.obj: BSP/hdc_driver.c.obj
 
 # target to build an object file
 BSP/hdc_driver.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/BSP/hdc_driver.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/BSP/hdc_driver.c.obj
 .PHONY : BSP/hdc_driver.c.obj
 
 BSP/hdc_driver.i: BSP/hdc_driver.c.i
@@ -309,7 +309,7 @@ BSP/hdc_driver.i: BSP/hdc_driver.c.i
 
 # target to preprocess a source file
 BSP/hdc_driver.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/BSP/hdc_driver.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/BSP/hdc_driver.c.i
 .PHONY : BSP/hdc_driver.c.i
 
 BSP/hdc_driver.s: BSP/hdc_driver.c.s
@@ -317,7 +317,7 @@ BSP/hdc_driver.s: BSP/hdc_driver.c.s
 
 # target to generate assembly for a file
 BSP/hdc_driver.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/BSP/hdc_driver.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/BSP/hdc_driver.c.s
 .PHONY : BSP/hdc_driver.c.s
 
 Core/Src/adc.obj: Core/Src/adc.c.obj
@@ -325,7 +325,7 @@ Core/Src/adc.obj: Core/Src/adc.c.obj
 
 # target to build an object file
 Core/Src/adc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/adc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/adc.c.obj
 .PHONY : Core/Src/adc.c.obj
 
 Core/Src/adc.i: Core/Src/adc.c.i
@@ -333,7 +333,7 @@ Core/Src/adc.i: Core/Src/adc.c.i
 
 # target to preprocess a source file
 Core/Src/adc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/adc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/adc.c.i
 .PHONY : Core/Src/adc.c.i
 
 Core/Src/adc.s: Core/Src/adc.c.s
@@ -341,7 +341,7 @@ Core/Src/adc.s: Core/Src/adc.c.s
 
 # target to generate assembly for a file
 Core/Src/adc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/adc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/adc.c.s
 .PHONY : Core/Src/adc.c.s
 
 Core/Src/can.obj: Core/Src/can.c.obj
@@ -349,7 +349,7 @@ Core/Src/can.obj: Core/Src/can.c.obj
 
 # target to build an object file
 Core/Src/can.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/can.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/can.c.obj
 .PHONY : Core/Src/can.c.obj
 
 Core/Src/can.i: Core/Src/can.c.i
@@ -357,7 +357,7 @@ Core/Src/can.i: Core/Src/can.c.i
 
 # target to preprocess a source file
 Core/Src/can.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/can.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/can.c.i
 .PHONY : Core/Src/can.c.i
 
 Core/Src/can.s: Core/Src/can.c.s
@@ -365,7 +365,7 @@ Core/Src/can.s: Core/Src/can.c.s
 
 # target to generate assembly for a file
 Core/Src/can.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/can.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/can.c.s
 .PHONY : Core/Src/can.c.s
 
 Core/Src/dma.obj: Core/Src/dma.c.obj
@@ -373,7 +373,7 @@ Core/Src/dma.obj: Core/Src/dma.c.obj
 
 # target to build an object file
 Core/Src/dma.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/dma.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/dma.c.obj
 .PHONY : Core/Src/dma.c.obj
 
 Core/Src/dma.i: Core/Src/dma.c.i
@@ -381,7 +381,7 @@ Core/Src/dma.i: Core/Src/dma.c.i
 
 # target to preprocess a source file
 Core/Src/dma.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/dma.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/dma.c.i
 .PHONY : Core/Src/dma.c.i
 
 Core/Src/dma.s: Core/Src/dma.c.s
@@ -389,7 +389,7 @@ Core/Src/dma.s: Core/Src/dma.c.s
 
 # target to generate assembly for a file
 Core/Src/dma.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/dma.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/dma.c.s
 .PHONY : Core/Src/dma.c.s
 
 Core/Src/freertos.obj: Core/Src/freertos.c.obj
@@ -397,7 +397,7 @@ Core/Src/freertos.obj: Core/Src/freertos.c.obj
 
 # target to build an object file
 Core/Src/freertos.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/freertos.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/freertos.c.obj
 .PHONY : Core/Src/freertos.c.obj
 
 Core/Src/freertos.i: Core/Src/freertos.c.i
@@ -405,7 +405,7 @@ Core/Src/freertos.i: Core/Src/freertos.c.i
 
 # target to preprocess a source file
 Core/Src/freertos.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/freertos.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/freertos.c.i
 .PHONY : Core/Src/freertos.c.i
 
 Core/Src/freertos.s: Core/Src/freertos.c.s
@@ -413,7 +413,7 @@ Core/Src/freertos.s: Core/Src/freertos.c.s
 
 # target to generate assembly for a file
 Core/Src/freertos.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/freertos.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/freertos.c.s
 .PHONY : Core/Src/freertos.c.s
 
 Core/Src/gpio.obj: Core/Src/gpio.c.obj
@@ -421,7 +421,7 @@ Core/Src/gpio.obj: Core/Src/gpio.c.obj
 
 # target to build an object file
 Core/Src/gpio.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/gpio.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/gpio.c.obj
 .PHONY : Core/Src/gpio.c.obj
 
 Core/Src/gpio.i: Core/Src/gpio.c.i
@@ -429,7 +429,7 @@ Core/Src/gpio.i: Core/Src/gpio.c.i
 
 # target to preprocess a source file
 Core/Src/gpio.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/gpio.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/gpio.c.i
 .PHONY : Core/Src/gpio.c.i
 
 Core/Src/gpio.s: Core/Src/gpio.c.s
@@ -437,7 +437,7 @@ Core/Src/gpio.s: Core/Src/gpio.c.s
 
 # target to generate assembly for a file
 Core/Src/gpio.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/gpio.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/gpio.c.s
 .PHONY : Core/Src/gpio.c.s
 
 Core/Src/main.obj: Core/Src/main.c.obj
@@ -445,7 +445,7 @@ Core/Src/main.obj: Core/Src/main.c.obj
 
 # target to build an object file
 Core/Src/main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/main.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/main.c.obj
 .PHONY : Core/Src/main.c.obj
 
 Core/Src/main.i: Core/Src/main.c.i
@@ -453,7 +453,7 @@ Core/Src/main.i: Core/Src/main.c.i
 
 # target to preprocess a source file
 Core/Src/main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/main.c.i
 .PHONY : Core/Src/main.c.i
 
 Core/Src/main.s: Core/Src/main.c.s
@@ -461,7 +461,7 @@ Core/Src/main.s: Core/Src/main.c.s
 
 # target to generate assembly for a file
 Core/Src/main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/main.c.s
 .PHONY : Core/Src/main.c.s
 
 Core/Src/spi.obj: Core/Src/spi.c.obj
@@ -469,7 +469,7 @@ Core/Src/spi.obj: Core/Src/spi.c.obj
 
 # target to build an object file
 Core/Src/spi.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/spi.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/spi.c.obj
 .PHONY : Core/Src/spi.c.obj
 
 Core/Src/spi.i: Core/Src/spi.c.i
@@ -477,7 +477,7 @@ Core/Src/spi.i: Core/Src/spi.c.i
 
 # target to preprocess a source file
 Core/Src/spi.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/spi.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/spi.c.i
 .PHONY : Core/Src/spi.c.i
 
 Core/Src/spi.s: Core/Src/spi.c.s
@@ -485,7 +485,7 @@ Core/Src/spi.s: Core/Src/spi.c.s
 
 # target to generate assembly for a file
 Core/Src/spi.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/spi.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/spi.c.s
 .PHONY : Core/Src/spi.c.s
 
 Core/Src/stm32f4xx_hal_msp.obj: Core/Src/stm32f4xx_hal_msp.c.obj
@@ -493,7 +493,7 @@ Core/Src/stm32f4xx_hal_msp.obj: Core/Src/stm32f4xx_hal_msp.c.obj
 
 # target to build an object file
 Core/Src/stm32f4xx_hal_msp.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
 .PHONY : Core/Src/stm32f4xx_hal_msp.c.obj
 
 Core/Src/stm32f4xx_hal_msp.i: Core/Src/stm32f4xx_hal_msp.c.i
@@ -501,7 +501,7 @@ Core/Src/stm32f4xx_hal_msp.i: Core/Src/stm32f4xx_hal_msp.c.i
 
 # target to preprocess a source file
 Core/Src/stm32f4xx_hal_msp.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/stm32f4xx_hal_msp.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/stm32f4xx_hal_msp.c.i
 .PHONY : Core/Src/stm32f4xx_hal_msp.c.i
 
 Core/Src/stm32f4xx_hal_msp.s: Core/Src/stm32f4xx_hal_msp.c.s
@@ -509,7 +509,7 @@ Core/Src/stm32f4xx_hal_msp.s: Core/Src/stm32f4xx_hal_msp.c.s
 
 # target to generate assembly for a file
 Core/Src/stm32f4xx_hal_msp.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/stm32f4xx_hal_msp.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/stm32f4xx_hal_msp.c.s
 .PHONY : Core/Src/stm32f4xx_hal_msp.c.s
 
 Core/Src/stm32f4xx_hal_timebase_tim.obj: Core/Src/stm32f4xx_hal_timebase_tim.c.obj
@@ -517,7 +517,7 @@ Core/Src/stm32f4xx_hal_timebase_tim.obj: Core/Src/stm32f4xx_hal_timebase_tim.c.o
 
 # target to build an object file
 Core/Src/stm32f4xx_hal_timebase_tim.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/stm32f4xx_hal_timebase_tim.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/stm32f4xx_hal_timebase_tim.c.obj
 .PHONY : Core/Src/stm32f4xx_hal_timebase_tim.c.obj
 
 Core/Src/stm32f4xx_hal_timebase_tim.i: Core/Src/stm32f4xx_hal_timebase_tim.c.i
@@ -525,7 +525,7 @@ Core/Src/stm32f4xx_hal_timebase_tim.i: Core/Src/stm32f4xx_hal_timebase_tim.c.i
 
 # target to preprocess a source file
 Core/Src/stm32f4xx_hal_timebase_tim.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/stm32f4xx_hal_timebase_tim.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/stm32f4xx_hal_timebase_tim.c.i
 .PHONY : Core/Src/stm32f4xx_hal_timebase_tim.c.i
 
 Core/Src/stm32f4xx_hal_timebase_tim.s: Core/Src/stm32f4xx_hal_timebase_tim.c.s
@@ -533,7 +533,7 @@ Core/Src/stm32f4xx_hal_timebase_tim.s: Core/Src/stm32f4xx_hal_timebase_tim.c.s
 
 # target to generate assembly for a file
 Core/Src/stm32f4xx_hal_timebase_tim.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/stm32f4xx_hal_timebase_tim.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/stm32f4xx_hal_timebase_tim.c.s
 .PHONY : Core/Src/stm32f4xx_hal_timebase_tim.c.s
 
 Core/Src/stm32f4xx_it.obj: Core/Src/stm32f4xx_it.c.obj
@@ -541,7 +541,7 @@ Core/Src/stm32f4xx_it.obj: Core/Src/stm32f4xx_it.c.obj
 
 # target to build an object file
 Core/Src/stm32f4xx_it.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/stm32f4xx_it.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/stm32f4xx_it.c.obj
 .PHONY : Core/Src/stm32f4xx_it.c.obj
 
 Core/Src/stm32f4xx_it.i: Core/Src/stm32f4xx_it.c.i
@@ -549,7 +549,7 @@ Core/Src/stm32f4xx_it.i: Core/Src/stm32f4xx_it.c.i
 
 # target to preprocess a source file
 Core/Src/stm32f4xx_it.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/stm32f4xx_it.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/stm32f4xx_it.c.i
 .PHONY : Core/Src/stm32f4xx_it.c.i
 
 Core/Src/stm32f4xx_it.s: Core/Src/stm32f4xx_it.c.s
@@ -557,7 +557,7 @@ Core/Src/stm32f4xx_it.s: Core/Src/stm32f4xx_it.c.s
 
 # target to generate assembly for a file
 Core/Src/stm32f4xx_it.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/stm32f4xx_it.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/stm32f4xx_it.c.s
 .PHONY : Core/Src/stm32f4xx_it.c.s
 
 Core/Src/syscalls.obj: Core/Src/syscalls.c.obj
@@ -565,7 +565,7 @@ Core/Src/syscalls.obj: Core/Src/syscalls.c.obj
 
 # target to build an object file
 Core/Src/syscalls.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/syscalls.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/syscalls.c.obj
 .PHONY : Core/Src/syscalls.c.obj
 
 Core/Src/syscalls.i: Core/Src/syscalls.c.i
@@ -573,7 +573,7 @@ Core/Src/syscalls.i: Core/Src/syscalls.c.i
 
 # target to preprocess a source file
 Core/Src/syscalls.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/syscalls.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/syscalls.c.i
 .PHONY : Core/Src/syscalls.c.i
 
 Core/Src/syscalls.s: Core/Src/syscalls.c.s
@@ -581,7 +581,7 @@ Core/Src/syscalls.s: Core/Src/syscalls.c.s
 
 # target to generate assembly for a file
 Core/Src/syscalls.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/syscalls.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/syscalls.c.s
 .PHONY : Core/Src/syscalls.c.s
 
 Core/Src/system_stm32f4xx.obj: Core/Src/system_stm32f4xx.c.obj
@@ -589,7 +589,7 @@ Core/Src/system_stm32f4xx.obj: Core/Src/system_stm32f4xx.c.obj
 
 # target to build an object file
 Core/Src/system_stm32f4xx.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/system_stm32f4xx.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/system_stm32f4xx.c.obj
 .PHONY : Core/Src/system_stm32f4xx.c.obj
 
 Core/Src/system_stm32f4xx.i: Core/Src/system_stm32f4xx.c.i
@@ -597,7 +597,7 @@ Core/Src/system_stm32f4xx.i: Core/Src/system_stm32f4xx.c.i
 
 # target to preprocess a source file
 Core/Src/system_stm32f4xx.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/system_stm32f4xx.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/system_stm32f4xx.c.i
 .PHONY : Core/Src/system_stm32f4xx.c.i
 
 Core/Src/system_stm32f4xx.s: Core/Src/system_stm32f4xx.c.s
@@ -605,7 +605,7 @@ Core/Src/system_stm32f4xx.s: Core/Src/system_stm32f4xx.c.s
 
 # target to generate assembly for a file
 Core/Src/system_stm32f4xx.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/system_stm32f4xx.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/system_stm32f4xx.c.s
 .PHONY : Core/Src/system_stm32f4xx.c.s
 
 Core/Src/tim.obj: Core/Src/tim.c.obj
@@ -613,7 +613,7 @@ Core/Src/tim.obj: Core/Src/tim.c.obj
 
 # target to build an object file
 Core/Src/tim.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/tim.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/tim.c.obj
 .PHONY : Core/Src/tim.c.obj
 
 Core/Src/tim.i: Core/Src/tim.c.i
@@ -621,7 +621,7 @@ Core/Src/tim.i: Core/Src/tim.c.i
 
 # target to preprocess a source file
 Core/Src/tim.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/tim.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/tim.c.i
 .PHONY : Core/Src/tim.c.i
 
 Core/Src/tim.s: Core/Src/tim.c.s
@@ -629,7 +629,7 @@ Core/Src/tim.s: Core/Src/tim.c.s
 
 # target to generate assembly for a file
 Core/Src/tim.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/tim.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/tim.c.s
 .PHONY : Core/Src/tim.c.s
 
 Core/Src/usart.obj: Core/Src/usart.c.obj
@@ -637,7 +637,7 @@ Core/Src/usart.obj: Core/Src/usart.c.obj
 
 # target to build an object file
 Core/Src/usart.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/usart.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/usart.c.obj
 .PHONY : Core/Src/usart.c.obj
 
 Core/Src/usart.i: Core/Src/usart.c.i
@@ -645,7 +645,7 @@ Core/Src/usart.i: Core/Src/usart.c.i
 
 # target to preprocess a source file
 Core/Src/usart.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/usart.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/usart.c.i
 .PHONY : Core/Src/usart.c.i
 
 Core/Src/usart.s: Core/Src/usart.c.s
@@ -653,7 +653,7 @@ Core/Src/usart.s: Core/Src/usart.c.s
 
 # target to generate assembly for a file
 Core/Src/usart.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Core/Src/usart.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Core/Src/usart.c.s
 .PHONY : Core/Src/usart.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
@@ -661,7 +661,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.obj: Drivers/STM32F4xx_HAL_Driver
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.i
@@ -669,7 +669,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.i: Drivers/STM32F4xx_HAL_Driver/S
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.s
@@ -677,7 +677,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.s: Drivers/STM32F4xx_HAL_Driver/S
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
@@ -685,7 +685,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.obj: Drivers/STM32F4xx_HAL_Dr
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.i
@@ -693,7 +693,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.i: Drivers/STM32F4xx_HAL_Driv
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.s
@@ -701,7 +701,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.s: Drivers/STM32F4xx_HAL_Driv
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj
@@ -709,7 +709,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.obj: Drivers/STM32F4xx_HAL
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.i
@@ -717,7 +717,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.i: Drivers/STM32F4xx_HAL_D
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.s
@@ -725,7 +725,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.s: Drivers/STM32F4xx_HAL_D
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.obj
@@ -733,7 +733,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.obj: Drivers/STM32F4xx_HAL_Dr
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.i
@@ -741,7 +741,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.i: Drivers/STM32F4xx_HAL_Driv
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.s
@@ -749,7 +749,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.s: Drivers/STM32F4xx_HAL_Driv
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
@@ -757,7 +757,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.obj: Drivers/STM32F4xx_HAL
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.i
@@ -765,7 +765,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.i: Drivers/STM32F4xx_HAL_D
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.s
@@ -773,7 +773,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.s: Drivers/STM32F4xx_HAL_D
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
@@ -781,7 +781,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.obj: Drivers/STM32F4xx_HAL_Dr
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.i
@@ -789,7 +789,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.i: Drivers/STM32F4xx_HAL_Driv
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.s
@@ -797,7 +797,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.s: Drivers/STM32F4xx_HAL_Driv
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj
@@ -805,7 +805,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.obj: Drivers/STM32F4xx_HAL
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.i
@@ -813,7 +813,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.i: Drivers/STM32F4xx_HAL_D
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.s
@@ -821,7 +821,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.s: Drivers/STM32F4xx_HAL_D
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj
@@ -829,7 +829,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.obj: Drivers/STM32F4xx_HAL_D
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.i
@@ -837,7 +837,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.i: Drivers/STM32F4xx_HAL_Dri
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.s
@@ -845,7 +845,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.s: Drivers/STM32F4xx_HAL_Dri
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
@@ -853,7 +853,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.obj: Drivers/STM32F4xx_HAL_
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.i
@@ -861,7 +861,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.i: Drivers/STM32F4xx_HAL_Dr
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.s
@@ -869,7 +869,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.s: Drivers/STM32F4xx_HAL_Dr
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
@@ -877,7 +877,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.obj: Drivers/STM32F4xx_H
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.i
@@ -885,7 +885,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.i: Drivers/STM32F4xx_HAL
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.s
@@ -893,7 +893,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.s: Drivers/STM32F4xx_HAL
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj
@@ -901,7 +901,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.obj: Drivers/STM32F
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.i
@@ -909,7 +909,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.i: Drivers/STM32F4x
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.s
@@ -917,7 +917,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.s: Drivers/STM32F4x
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
@@ -925,7 +925,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.obj: Drivers/STM32F4xx_HAL_D
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.i
@@ -933,7 +933,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.i: Drivers/STM32F4xx_HAL_Dri
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.s
@@ -941,7 +941,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.s: Drivers/STM32F4xx_HAL_Dri
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj
@@ -949,7 +949,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.obj: Drivers/STM32F4xx_HAL_Dr
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.i
@@ -957,7 +957,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.i: Drivers/STM32F4xx_HAL_Driv
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.s
@@ -965,7 +965,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.s: Drivers/STM32F4xx_HAL_Driv
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
@@ -973,7 +973,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.obj: Drivers/STM32F4xx_HAL
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.i
@@ -981,7 +981,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.i: Drivers/STM32F4xx_HAL_D
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.s
@@ -989,7 +989,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.s: Drivers/STM32F4xx_HAL_D
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
@@ -997,7 +997,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.obj: Drivers/STM32F4xx_HAL_Dr
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.i
@@ -1005,7 +1005,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.i: Drivers/STM32F4xx_HAL_Driv
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.s
@@ -1013,7 +1013,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.s: Drivers/STM32F4xx_HAL_Driv
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
@@ -1021,7 +1021,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.obj: Drivers/STM32F4xx_HAL
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.i
@@ -1029,7 +1029,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.i: Drivers/STM32F4xx_HAL_D
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.s
@@ -1037,7 +1037,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.s: Drivers/STM32F4xx_HAL_D
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
@@ -1045,7 +1045,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.obj: Drivers/STM32F4xx_HAL_Dr
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.i
@@ -1053,7 +1053,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.i: Drivers/STM32F4xx_HAL_Driv
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.s
@@ -1061,7 +1061,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.s: Drivers/STM32F4xx_HAL_Driv
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
@@ -1069,7 +1069,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.obj: Drivers/STM32F4xx_HAL_Dr
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.i
@@ -1077,7 +1077,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.i: Drivers/STM32F4xx_HAL_Driv
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.s
@@ -1085,7 +1085,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.s: Drivers/STM32F4xx_HAL_Driv
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
@@ -1093,7 +1093,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.obj: Drivers/STM32F4xx_HAL
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.i
@@ -1101,7 +1101,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.i: Drivers/STM32F4xx_HAL_D
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.s
@@ -1109,7 +1109,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.s: Drivers/STM32F4xx_HAL_D
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
@@ -1117,7 +1117,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.obj: Drivers/STM32F4xx_HAL_D
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.i
@@ -1125,7 +1125,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.i: Drivers/STM32F4xx_HAL_Dri
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.s
@@ -1133,7 +1133,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.s: Drivers/STM32F4xx_HAL_Dri
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.obj
@@ -1141,7 +1141,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.obj: Drivers/STM32F4xx_HAL_Dri
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.i
@@ -1149,7 +1149,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.i: Drivers/STM32F4xx_HAL_Drive
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.s
@@ -1157,7 +1157,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.s: Drivers/STM32F4xx_HAL_Drive
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.s
 
 FreeRTOS-Task/DJI_Motor_Task.obj: FreeRTOS-Task/DJI_Motor_Task.c.obj
@@ -1165,7 +1165,7 @@ FreeRTOS-Task/DJI_Motor_Task.obj: FreeRTOS-Task/DJI_Motor_Task.c.obj
 
 # target to build an object file
 FreeRTOS-Task/DJI_Motor_Task.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/FreeRTOS-Task/DJI_Motor_Task.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/FreeRTOS-Task/DJI_Motor_Task.c.obj
 .PHONY : FreeRTOS-Task/DJI_Motor_Task.c.obj
 
 FreeRTOS-Task/DJI_Motor_Task.i: FreeRTOS-Task/DJI_Motor_Task.c.i
@@ -1173,7 +1173,7 @@ FreeRTOS-Task/DJI_Motor_Task.i: FreeRTOS-Task/DJI_Motor_Task.c.i
 
 # target to preprocess a source file
 FreeRTOS-Task/DJI_Motor_Task.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/FreeRTOS-Task/DJI_Motor_Task.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/FreeRTOS-Task/DJI_Motor_Task.c.i
 .PHONY : FreeRTOS-Task/DJI_Motor_Task.c.i
 
 FreeRTOS-Task/DJI_Motor_Task.s: FreeRTOS-Task/DJI_Motor_Task.c.s
@@ -1181,7 +1181,7 @@ FreeRTOS-Task/DJI_Motor_Task.s: FreeRTOS-Task/DJI_Motor_Task.c.s
 
 # target to generate assembly for a file
 FreeRTOS-Task/DJI_Motor_Task.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/FreeRTOS-Task/DJI_Motor_Task.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/FreeRTOS-Task/DJI_Motor_Task.c.s
 .PHONY : FreeRTOS-Task/DJI_Motor_Task.c.s
 
 FreeRTOS-Task/Oled_Task.obj: FreeRTOS-Task/Oled_Task.c.obj
@@ -1189,7 +1189,7 @@ FreeRTOS-Task/Oled_Task.obj: FreeRTOS-Task/Oled_Task.c.obj
 
 # target to build an object file
 FreeRTOS-Task/Oled_Task.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/FreeRTOS-Task/Oled_Task.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/FreeRTOS-Task/Oled_Task.c.obj
 .PHONY : FreeRTOS-Task/Oled_Task.c.obj
 
 FreeRTOS-Task/Oled_Task.i: FreeRTOS-Task/Oled_Task.c.i
@@ -1197,7 +1197,7 @@ FreeRTOS-Task/Oled_Task.i: FreeRTOS-Task/Oled_Task.c.i
 
 # target to preprocess a source file
 FreeRTOS-Task/Oled_Task.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/FreeRTOS-Task/Oled_Task.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/FreeRTOS-Task/Oled_Task.c.i
 .PHONY : FreeRTOS-Task/Oled_Task.c.i
 
 FreeRTOS-Task/Oled_Task.s: FreeRTOS-Task/Oled_Task.c.s
@@ -1205,7 +1205,7 @@ FreeRTOS-Task/Oled_Task.s: FreeRTOS-Task/Oled_Task.c.s
 
 # target to generate assembly for a file
 FreeRTOS-Task/Oled_Task.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/FreeRTOS-Task/Oled_Task.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/FreeRTOS-Task/Oled_Task.c.s
 .PHONY : FreeRTOS-Task/Oled_Task.c.s
 
 Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.obj: Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
@@ -1213,7 +1213,7 @@ Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.obj: Middlewares/Thi
 
 # target to build an object file
 Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
 
 Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.i: Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.i
@@ -1221,7 +1221,7 @@ Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.i: Middlewares/Third
 
 # target to preprocess a source file
 Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.i
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.i
 
 Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.s: Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.s
@@ -1229,7 +1229,7 @@ Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.s: Middlewares/Third
 
 # target to generate assembly for a file
 Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.s
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.s
 
 Middlewares/Third_Party/FreeRTOS/Source/croutine.obj: Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj
@@ -1237,7 +1237,7 @@ Middlewares/Third_Party/FreeRTOS/Source/croutine.obj: Middlewares/Third_Party/Fr
 
 # target to build an object file
 Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj
 
 Middlewares/Third_Party/FreeRTOS/Source/croutine.i: Middlewares/Third_Party/FreeRTOS/Source/croutine.c.i
@@ -1245,7 +1245,7 @@ Middlewares/Third_Party/FreeRTOS/Source/croutine.i: Middlewares/Third_Party/Free
 
 # target to preprocess a source file
 Middlewares/Third_Party/FreeRTOS/Source/croutine.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.i
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/croutine.c.i
 
 Middlewares/Third_Party/FreeRTOS/Source/croutine.s: Middlewares/Third_Party/FreeRTOS/Source/croutine.c.s
@@ -1253,7 +1253,7 @@ Middlewares/Third_Party/FreeRTOS/Source/croutine.s: Middlewares/Third_Party/Free
 
 # target to generate assembly for a file
 Middlewares/Third_Party/FreeRTOS/Source/croutine.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.s
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/croutine.c.s
 
 Middlewares/Third_Party/FreeRTOS/Source/event_groups.obj: Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj
@@ -1261,7 +1261,7 @@ Middlewares/Third_Party/FreeRTOS/Source/event_groups.obj: Middlewares/Third_Part
 
 # target to build an object file
 Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj
 
 Middlewares/Third_Party/FreeRTOS/Source/event_groups.i: Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.i
@@ -1269,7 +1269,7 @@ Middlewares/Third_Party/FreeRTOS/Source/event_groups.i: Middlewares/Third_Party/
 
 # target to preprocess a source file
 Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.i
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.i
 
 Middlewares/Third_Party/FreeRTOS/Source/event_groups.s: Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.s
@@ -1277,7 +1277,7 @@ Middlewares/Third_Party/FreeRTOS/Source/event_groups.s: Middlewares/Third_Party/
 
 # target to generate assembly for a file
 Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.s
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.s
 
 Middlewares/Third_Party/FreeRTOS/Source/list.obj: Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
@@ -1285,7 +1285,7 @@ Middlewares/Third_Party/FreeRTOS/Source/list.obj: Middlewares/Third_Party/FreeRT
 
 # target to build an object file
 Middlewares/Third_Party/FreeRTOS/Source/list.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
 
 Middlewares/Third_Party/FreeRTOS/Source/list.i: Middlewares/Third_Party/FreeRTOS/Source/list.c.i
@@ -1293,7 +1293,7 @@ Middlewares/Third_Party/FreeRTOS/Source/list.i: Middlewares/Third_Party/FreeRTOS
 
 # target to preprocess a source file
 Middlewares/Third_Party/FreeRTOS/Source/list.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.i
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/list.c.i
 
 Middlewares/Third_Party/FreeRTOS/Source/list.s: Middlewares/Third_Party/FreeRTOS/Source/list.c.s
@@ -1301,7 +1301,7 @@ Middlewares/Third_Party/FreeRTOS/Source/list.s: Middlewares/Third_Party/FreeRTOS
 
 # target to generate assembly for a file
 Middlewares/Third_Party/FreeRTOS/Source/list.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.s
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/list.c.s
 
 Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.obj: Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
@@ -1309,7 +1309,7 @@ Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.obj: Middlewa
 
 # target to build an object file
 Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
 
 Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.i: Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.i
@@ -1317,7 +1317,7 @@ Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.i: Middleware
 
 # target to preprocess a source file
 Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.i
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.i
 
 Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.s: Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.s
@@ -1325,7 +1325,7 @@ Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.s: Middleware
 
 # target to generate assembly for a file
 Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.s
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.s
 
 Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.obj: Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
@@ -1333,7 +1333,7 @@ Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.obj: Middlewares
 
 # target to build an object file
 Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
 
 Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.i: Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.i
@@ -1341,7 +1341,7 @@ Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.i: Middlewares/T
 
 # target to preprocess a source file
 Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.i
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.i
 
 Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.s: Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.s
@@ -1349,7 +1349,7 @@ Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.s: Middlewares/T
 
 # target to generate assembly for a file
 Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.s
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.s
 
 Middlewares/Third_Party/FreeRTOS/Source/queue.obj: Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
@@ -1357,7 +1357,7 @@ Middlewares/Third_Party/FreeRTOS/Source/queue.obj: Middlewares/Third_Party/FreeR
 
 # target to build an object file
 Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
 
 Middlewares/Third_Party/FreeRTOS/Source/queue.i: Middlewares/Third_Party/FreeRTOS/Source/queue.c.i
@@ -1365,7 +1365,7 @@ Middlewares/Third_Party/FreeRTOS/Source/queue.i: Middlewares/Third_Party/FreeRTO
 
 # target to preprocess a source file
 Middlewares/Third_Party/FreeRTOS/Source/queue.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.i
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/queue.c.i
 
 Middlewares/Third_Party/FreeRTOS/Source/queue.s: Middlewares/Third_Party/FreeRTOS/Source/queue.c.s
@@ -1373,7 +1373,7 @@ Middlewares/Third_Party/FreeRTOS/Source/queue.s: Middlewares/Third_Party/FreeRTO
 
 # target to generate assembly for a file
 Middlewares/Third_Party/FreeRTOS/Source/queue.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.s
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/queue.c.s
 
 Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.obj: Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj
@@ -1381,7 +1381,7 @@ Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.obj: Middlewares/Third_Par
 
 # target to build an object file
 Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj
 
 Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.i: Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.i
@@ -1389,7 +1389,7 @@ Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.i: Middlewares/Third_Party
 
 # target to preprocess a source file
 Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.i
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.i
 
 Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.s: Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.s
@@ -1397,7 +1397,7 @@ Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.s: Middlewares/Third_Party
 
 # target to generate assembly for a file
 Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.s
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.s
 
 Middlewares/Third_Party/FreeRTOS/Source/tasks.obj: Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
@@ -1405,7 +1405,7 @@ Middlewares/Third_Party/FreeRTOS/Source/tasks.obj: Middlewares/Third_Party/FreeR
 
 # target to build an object file
 Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
 
 Middlewares/Third_Party/FreeRTOS/Source/tasks.i: Middlewares/Third_Party/FreeRTOS/Source/tasks.c.i
@@ -1413,7 +1413,7 @@ Middlewares/Third_Party/FreeRTOS/Source/tasks.i: Middlewares/Third_Party/FreeRTO
 
 # target to preprocess a source file
 Middlewares/Third_Party/FreeRTOS/Source/tasks.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.i
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/tasks.c.i
 
 Middlewares/Third_Party/FreeRTOS/Source/tasks.s: Middlewares/Third_Party/FreeRTOS/Source/tasks.c.s
@@ -1421,7 +1421,7 @@ Middlewares/Third_Party/FreeRTOS/Source/tasks.s: Middlewares/Third_Party/FreeRTO
 
 # target to generate assembly for a file
 Middlewares/Third_Party/FreeRTOS/Source/tasks.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.s
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/tasks.c.s
 
 Middlewares/Third_Party/FreeRTOS/Source/timers.obj: Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
@@ -1429,7 +1429,7 @@ Middlewares/Third_Party/FreeRTOS/Source/timers.obj: Middlewares/Third_Party/Free
 
 # target to build an object file
 Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
 
 Middlewares/Third_Party/FreeRTOS/Source/timers.i: Middlewares/Third_Party/FreeRTOS/Source/timers.c.i
@@ -1437,7 +1437,7 @@ Middlewares/Third_Party/FreeRTOS/Source/timers.i: Middlewares/Third_Party/FreeRT
 
 # target to preprocess a source file
 Middlewares/Third_Party/FreeRTOS/Source/timers.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.i
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/timers.c.i
 
 Middlewares/Third_Party/FreeRTOS/Source/timers.s: Middlewares/Third_Party/FreeRTOS/Source/timers.c.s
@@ -1445,7 +1445,7 @@ Middlewares/Third_Party/FreeRTOS/Source/timers.s: Middlewares/Third_Party/FreeRT
 
 # target to generate assembly for a file
 Middlewares/Third_Party/FreeRTOS/Source/timers.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.s
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/timers.c.s
 
 startup/startup_stm32f427xx.obj: startup/startup_stm32f427xx.s.obj
@@ -1453,7 +1453,7 @@ startup/startup_stm32f427xx.obj: startup/startup_stm32f427xx.s.obj
 
 # target to build an object file
 startup/startup_stm32f427xx.s.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FirstProject.elf.dir\build.make CMakeFiles/FirstProject.elf.dir/startup/startup_stm32f427xx.s.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/startup/startup_stm32f427xx.s.obj
 .PHONY : startup/startup_stm32f427xx.s.obj
 
 # Help Target
@@ -1464,7 +1464,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... FirstProject.elf
+	@echo ... zxx-RM-A-Template.elf
 	@echo ... BSP/DJI_Motor_Ctrl.obj
 	@echo ... BSP/DJI_Motor_Ctrl.i
 	@echo ... BSP/DJI_Motor_Ctrl.s

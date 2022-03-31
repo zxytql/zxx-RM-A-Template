@@ -17,7 +17,9 @@
 
 uint16_t oled_value = 0;
 uint8_t oled_key_state = 0;
-
+uint16_t oled_show_value = 0;
+uint8_t key_up = 1;
+uint16_t zxy1;
 /* USER CODE BEGIN Header_Oled_Task_Entry */
 /**
 * @brief Function implementing the Oled_Task thread.
@@ -25,7 +27,7 @@ uint8_t oled_key_state = 0;
 * @retval None
 */
 /* USER CODE END Header_Oled_Task_Entry */
-void Oled_Task_Entry(void const * argument)
+_Noreturn void Oled_Task_Entry(void const * argument)
 {
   /* USER CODE BEGIN Oled_Task_Entry */
 	oled_init();
@@ -48,13 +50,14 @@ void Oled_Task_Entry(void const * argument)
 		oled_drawline(0,63,127,63,Pen_Write);
 		oled_drawline(0,62,127,62,Pen_Write);  //Draw frame
 		//oled_LOGO();
-		oled_printf(1,1,"Now_value: ");
+		//oled_printf(1,1,"Now_value: ");
+        oled_showstring(1,1,"TEST:");
 		//********************//
-		oled_value = TIM5->CCR2;
+		oled_show_value = zxy1;
 		//********************//
-		oled_shownum(1,11,oled_value,0x00,5);
-		oled_printf(1,1,"Now_state: ");
-		
+		oled_shownum(1,11,oled_show_value,0x00,5);
+        oled_shownum(2,11,key_up,0x00,5);
+        oled_shownum(3,11,oled_value,0x00,5);
 		#endif
 		
 		Oled_Key_Scan();  //按键扫描
@@ -78,11 +81,10 @@ void Oled_Value_trans(uint16_t value)
 	if(value == 0)
 	{
 		//osDelay(300);
-		if(value == 0){return;}
 	}
 	else if(value > 0 && value < 100)
 	{
-		osDelay(300);
+		osDelay(100);
 		if(value > 0 && value < 100)
 		{
 			oled_key_state = press;
@@ -90,7 +92,7 @@ void Oled_Value_trans(uint16_t value)
 	}
 	else if(value > 800 && value <= 900)
 	{
-		osDelay(300);
+		osDelay(100);
 		if(value > 800 && value <= 900)
 		{
 			oled_key_state = left;
@@ -98,7 +100,7 @@ void Oled_Value_trans(uint16_t value)
 	}
 	else if(value > 1700 && value <= 1800)
 	{
-		osDelay(300);
+		osDelay(100);
 		if(value > 1700 && value <= 1800)
 		{
 			oled_key_state = right;
@@ -106,7 +108,7 @@ void Oled_Value_trans(uint16_t value)
 	}
 	else if(value > 2400 && value <= 2500)
 	{
-		osDelay(300);
+		osDelay(100);
 		if(value > 2400 && value <= 2500)
 		{
 			oled_key_state = up;
@@ -114,7 +116,7 @@ void Oled_Value_trans(uint16_t value)
 	}
 	else if(value > 3200 && value <= 3300)
 	{
-		osDelay(300);
+		osDelay(100);
 		if(value > 3200 && value <= 3300)
 		{
 			oled_key_state = down;
@@ -122,7 +124,6 @@ void Oled_Value_trans(uint16_t value)
 	}
 	else if(value > 4000 && value <= 4100)
 	{
-		osDelay(100);
 		if(value > 4000 && value <= 4100)
 		{
 			oled_key_state = none;
@@ -136,34 +137,38 @@ void Oled_Value_trans(uint16_t value)
 
 void Oled_Action(uint8_t state)
 {
-	if(state == none)
-	{
-		Oled_Key_None_Callback();
-	}
-	else if(state == press)
-	{
-		Oled_Key_Press_Callback();
-	}
-	else if(state == up)
-	{
-		Oled_Key_Up_Callback();
-	}
-	else if(state == down)
-	{
-		Oled_Key_Down_Callback();
-	}
-	else if(state == left)
-	{
-		Oled_Key_Left_Callback();
-	}
-	else if(state == right)
-	{
-		Oled_Key_Right_Callback();
-	}
-	else
-	{
-		return;
-	}
+    if(key_up == 1 && oled_key_state != none)
+    {
+        key_up = 0;
+        if(state == press)
+        {
+            Oled_Key_Press_Callback();
+        }
+        else if(state == up)
+        {
+            Oled_Key_Up_Callback();
+        }
+        else if(state == down)
+        {
+            Oled_Key_Down_Callback();
+        }
+        else if(state == left)
+        {
+            Oled_Key_Left_Callback();
+        }
+        else if(state == right)
+        {
+            Oled_Key_Right_Callback();
+        }
+        else
+        {
+            return;
+        }
+    }
+	if(key_up == 0 && oled_key_state == none)
+    {
+        key_up = 1;
+    }
 }
 
 
@@ -174,18 +179,14 @@ void Oled_Action(uint8_t state)
 /*******************************************************************/
 /*******************************************************************/
 
-void Oled_Key_None_Callback(void)
-{
-	
-}
-uint16_t zxy1;
 void Oled_Key_Press_Callback(void)
 {
-		uint8_t zxy_buf[]= "CTIN";
-		zxy1 = sizeof(zxy_buf);
-		HAL_UART_Transmit(&huart8,zxy_buf,sizeof(zxy_buf),0xffff);
+//		uint8_t zxy_buf[]= "CTIN";
+//		zxy1 = sizeof(zxy_buf);
+//		HAL_UART_Transmit(&huart8,zxy_buf,sizeof(zxy_buf),0xffff);
 		//HAL_UART_Transmit_IT(&huart6,zxy_buf,sizeof(zxy_buf));
 		//Servo_Ctrl('C',90);
+        zxy1++;
 }
 
 void Oled_Key_Up_Callback(void)

@@ -13,6 +13,7 @@
 #include "DJI_Motor_Task.h"
 #include "cmsis_os.h"
 #include "DJI_Motor_Ctrl.h"
+#include "bsp_led.h"
 
 /* USER CODE BEGIN Header_DJI_Motor_Entry */
 /**
@@ -23,17 +24,14 @@
 /* USER CODE END Header_DJI_Motor_Entry */
 _Noreturn void DJI_Motor_Entry(void const * argument)
 {
-  /* USER CODE BEGIN DJI_Motor_Entry */
-#ifdef USING_BORAD_DRIVER
-  DriverInit();
-#endif
-  /* Infinite loop */
-  for(;;)
-  {
-#ifdef USING_BORAD_DRIVER
-      MotorCtrl();
-#endif
-      osDelay(1);
-  }
-  /* USER CODE END DJI_Motor_Entry */
+    /* USER CODE BEGIN DJI_Motor_Entry */
+    DriverInit();
+    /* Infinite loop */
+    for(;;)
+    {
+        MotorCtrl();
+        HAL_GPIO_TogglePin(LED_1_PORT,LED_1_PIN);
+        osDelay(1);
+    }
+    /* USER CODE END DJI_Motor_Entry */
 }

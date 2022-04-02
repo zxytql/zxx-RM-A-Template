@@ -49,7 +49,7 @@ void DriverInit(void)
              * POSITION_CONTROL_MODE
              * */
             //Driver[i].unitMode = SPEED_CONTROL_MODE;
-						Driver[i].unitMode = POSITION_CONTROL_MODE;
+            Driver[i].unitMode = POSITION_CONTROL_MODE;
             Driver[i].velCtrl.kp = VEL_KP_3508;
             Driver[i].velCtrl.ki = VEL_KI_3508;
             Driver[i].velCtrl.maxOutput = CURRENT_MAX_3508;

@@ -2,13 +2,14 @@
   **************************(C) COPYRIGHT 2020-2022 HCRT****************************
   * @file       bsp_can.c/h
   * @brief      CAN中断接收函数，接收电机数据,CAN发送函数发送电机电流控制电机.
-  * @note       在CubeMx中配置Can, 波特率为1M bit/s, 引脚为PD0和PD1
+  * @note       在CubeMx中配置Can, 波特率为1M bit/s, 引脚为PD0和PD1，并且在初始化中加入
+  *             CAN_Filter_Init();
   * @history
   *  Version    Date            Author          Modification
   *  V1.0.0     Dec-26-2018     RM              1. done
   *  V1.1.0     Nov-11-2019     RM              1. support hal lib
-  *  V1.2.0			2020.2.4        YLT             支持hdc驱动
-	*  V1.2.1     2022-01-09      ZXY             Add note
+  *  V1.2.0		2020.2.4        YLT             支持hdc驱动
+  *  V1.2.1     2022-01-09      ZXY             Add note
   @verbatim
   ==============================================================================
 	* 修改原本大疆程序，读取elmo驱动发回来的速度，位置，电流

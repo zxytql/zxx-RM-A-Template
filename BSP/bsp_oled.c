@@ -1,25 +1,32 @@
 /**
   ****************************(C) COPYRIGHT 2022 HCRT****************************
   * @file       bsp_oled.c/h
+  * @version    V1.2.0
   * @brief      DJI Oled驱动文件
-	* @wiki       1. 开启ADC1中的通道6(IN6)
-								2. 在DMA2中配置ADC1
-								Stream -> DMA2 Stream 0
-								Direction -> Peripheral To Memory
-								Prio -> Low
-								Mode -> Circular
-								Data Width -> Word
-								Increment Address -> Memory
-								2. 配置SPI通讯为全双工模式, 速率设置为21M bit/s
-								PA7 -> SPI1_MOSI
-								PB3 -> SPI1_SCK
-								PB4 -> SPI1_MISO
-								3. 使能PB9和PB10引脚, User Label为OLED_DC和OLED_RST
   * @history
   *  Version    Date            Author          Modification
   *  V1.0.0     Dec-26-2018     RM              1. done
   *  V1.1.0     Nov-11-2019     RM              1. support hal lib
-	*  V1.2.0     2020-01-09      ZXY             1. Add wiki
+  *  V1.2.0     2020-01-09      ZXY             1. Add wiki
+  * @verbatim
+  * =============================================================================
+  *                                 配置过程
+  * =============================================================================
+  * 1. 开启ADC1中的通道6(IN6)
+  * 2. 在DMA2中配置ADC1
+  * Stream -> DMA2 Stream 0
+  * Direction -> Peripheral To Memory
+  * Priority -> Low
+  * Mode -> Circular
+  * Data Width -> Word
+  * Increment Address -> Memory
+  * 2. 配置SPI通讯为全双工模式, 速率设置为21M bit/s
+  * PA7 -> SPI1_MOSI
+  * PB3 -> SPI1_SCK
+  * PB4 -> SPI1_MISO
+  * 3. 使能PB9和PB10引脚, User Label为OLED_DC和OLED_RST
+  * @bug
+  * 1. 调用oled_printf时偶尔会导致程序堵塞
   ****************************(C) COPYRIGHT 2022 HCRT****************************
   */
 	

@@ -1,6 +1,7 @@
 /**
   ****************************(C) COPYRIGHT 2022 HCRT****************************
   * @file       DJI_Motor_Ctrl.c/h
+  * @version    V1.0.0
   * @brief      DJI电机控制算法
   * @note       
   * @history

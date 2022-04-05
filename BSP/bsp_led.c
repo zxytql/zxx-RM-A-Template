@@ -1,6 +1,7 @@
 /**
   ****************************(C) COPYRIGHT 2022 HCRT****************************
   * @file       bsp_led.c/h
+  * @version    V1.0.0
   * @brief      开发板LED支持包
   * @note       基于RM-A板开发，更换开发板可能需要更换对应引脚
   * @history

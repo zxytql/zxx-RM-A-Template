@@ -1,6 +1,7 @@
 /**
   **************************(C) COPYRIGHT 2020-2022 HCRT****************************
   * @file       bsp_can.c/h
+  * @version    V1.2.1
   * @brief      CAN中断接收函数，接收电机数据,CAN发送函数发送电机电流控制电机.
   * @note       在CubeMx中配置Can, 波特率为1M bit/s, 引脚为PD0和PD1，并且在初始化中加入
   *             CAN_Filter_Init();

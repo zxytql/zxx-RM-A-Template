@@ -13,9 +13,9 @@
 #include "Oled_Task.h"
 #include "cmsis_os.h"
 #include "bsp_servo.h"
-#include "usart.h"
+#include "bsp_usart.h"
 #include "DJI_Motor_Ctrl.h"
-
+#include "RC_Task.h"
 
 uint16_t oled_value = 0;
 uint8_t oled_key_state = 0;
@@ -24,7 +24,7 @@ uint8_t key_up = 1;
 uint16_t zxy1;
 /* USER CODE BEGIN Header_Oled_Task_Entry */
 /**
-* @brief Function implementing the Oled_Task thread.
+* @brief Oled_Task入口函数
 * @param argument: Not used
 * @retval None
 */
@@ -57,10 +57,17 @@ _Noreturn void Oled_Task_Entry(void const * argument)
         oled_showstring(2,1,"key_state:");
         oled_showstring(3,1,"key_value:");
         //********************//
-        oled_show_value = zxy1;
+//        if (rc.rc_KeyValue.right_vir_roll < 0)
+//        {
+//            oled_show_value = -rc.rc_KeyValue.right_vir_roll;
+//        }
+//        else
+//        {
+//            oled_show_value = rc.rc_KeyValue.right_vir_roll;
+//        }
         //********************//
-        oled_shownum(1,11,oled_show_value,0x00,5);
-        oled_shownum(2,11,oled_key_state,0x00,5);
+        oled_shownum(1,11,rc.zxy1,0x00,5);
+        oled_shownum(2,11,rc.rc_KeyValue.key_d,0x00,5);
         oled_shownum(3,11,oled_value,0x00,5);
 #endif
         Oled_Key_Scan();  //按键扫描

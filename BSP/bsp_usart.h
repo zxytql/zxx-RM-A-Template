@@ -20,8 +20,8 @@
 //#define USART6_BUFFLEN 28
 //#define USART6_MAX_LEN USART6_BUFFLEN * 2
 
-#define UART7_BUFFLEN 28
-#define UART7_MAX_LEN UART7_BUFFLEN * 2
+#define UART7_BUFFLEN 4
+#define UART7_MAX_LEN UART7_BUFFLEN*2
 
 //#define UART8_BUFFLEN 28
 //#define UART8_MAX_LEN UART8_BUFFLEN * 2
@@ -39,7 +39,7 @@ extern uint8_t usart1_buff[USART1_BUFFLEN];
 //extern uint8_t usart6_buff[USART6_BUFFLEN];
 extern uint8_t uart7_buff[UART7_BUFFLEN];
 //extern uint8_t uart8_buff[UART8_BUFFLEN];
-
+extern rc_rx_t rc_rx;
 /******** Function *********/
 void Usart_IdleIRQ_Init(UART_HandleTypeDef *huart);
 void Usart_IdleIRQ_Handler(UART_HandleTypeDef *huart);

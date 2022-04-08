@@ -2,9 +2,9 @@
   ****************************(C) COPYRIGHT 2022 HCRT****************************
   * @file       DJI_Motor_Task.c/h
   * @brief      DJI电机控制任务
-  * @note       1. 使用前需在board_config.h中选择控制方式，不同控制方式对应函数不同，
-	                 闭环板控制参考文件hdc_driver.c/h，板载控制参考DJI_Motor_Ctrl.c/h
-								2. 
+  * @note
+  * 1. 使用前需在board_config.h中选择控制方式，不同控制方式对应函数不同，
+  *    闭环板控制参考文件hdc_driver.c/h，板载控制参考DJI_Motor_Ctrl.c/h
   * @history
   *  Version    Date            Author          Modification
   *  V1.0.0     2022-01-08       zxy            First version
@@ -17,7 +17,7 @@
 
 /* USER CODE BEGIN Header_DJI_Motor_Entry */
 /**
-* @brief Function implementing the DJI_Motor_Task thread.
+* @brief DJI_Motor_Task入口函数
 * @param argument: Not used
 * @retval None
 */

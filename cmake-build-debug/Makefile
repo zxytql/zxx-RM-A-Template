@@ -1208,6 +1208,30 @@ FreeRTOS-Task/Oled_Task.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/FreeRTOS-Task/Oled_Task.c.s
 .PHONY : FreeRTOS-Task/Oled_Task.c.s
 
+FreeRTOS-Task/RC_Task.obj: FreeRTOS-Task/RC_Task.c.obj
+.PHONY : FreeRTOS-Task/RC_Task.obj
+
+# target to build an object file
+FreeRTOS-Task/RC_Task.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/FreeRTOS-Task/RC_Task.c.obj
+.PHONY : FreeRTOS-Task/RC_Task.c.obj
+
+FreeRTOS-Task/RC_Task.i: FreeRTOS-Task/RC_Task.c.i
+.PHONY : FreeRTOS-Task/RC_Task.i
+
+# target to preprocess a source file
+FreeRTOS-Task/RC_Task.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/FreeRTOS-Task/RC_Task.c.i
+.PHONY : FreeRTOS-Task/RC_Task.c.i
+
+FreeRTOS-Task/RC_Task.s: FreeRTOS-Task/RC_Task.c.s
+.PHONY : FreeRTOS-Task/RC_Task.s
+
+# target to generate assembly for a file
+FreeRTOS-Task/RC_Task.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/FreeRTOS-Task/RC_Task.c.s
+.PHONY : FreeRTOS-Task/RC_Task.c.s
+
 Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.obj: Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.obj
 
@@ -1600,6 +1624,9 @@ help:
 	@echo ... FreeRTOS-Task/Oled_Task.obj
 	@echo ... FreeRTOS-Task/Oled_Task.i
 	@echo ... FreeRTOS-Task/Oled_Task.s
+	@echo ... FreeRTOS-Task/RC_Task.obj
+	@echo ... FreeRTOS-Task/RC_Task.i
+	@echo ... FreeRTOS-Task/RC_Task.s
 	@echo ... Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.obj
 	@echo ... Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.i
 	@echo ... Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.s

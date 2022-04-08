@@ -17,6 +17,7 @@ enum
 	none, press, up, left, down, right 
 }Oled_Key_State_t;
 
+/******** Function ********/
 void Oled_Key_Scan(void);
 void Oled_Value_trans(uint16_t value);
 void Oled_Action(uint8_t);

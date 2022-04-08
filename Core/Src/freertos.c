@@ -50,6 +50,7 @@
 osThreadId defaultTaskHandle;
 osThreadId DJI_Motor_TaskHandle;
 osThreadId Oled_TaskHandle;
+osThreadId RC_TaskHandle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -59,6 +60,8 @@ osThreadId Oled_TaskHandle;
 void StartDefaultTask(void const * argument);
 void DJI_Motor_Entry(void const * argument);
 void Oled_Task_Entry(void const * argument);
+
+_Noreturn void RC_Task_Entry(void const * argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -116,6 +119,10 @@ void MX_FREERTOS_Init(void) {
   /* definition and creation of Oled_Task */
   osThreadDef(Oled_Task, Oled_Task_Entry, osPriorityHigh, 0, 128);
   Oled_TaskHandle = osThreadCreate(osThread(Oled_Task), NULL);
+
+  /* definition and creation of RC_Task */
+  osThreadDef(RC_Task, RC_Task_Entry, osPriorityHigh, 0, 128);
+  RC_TaskHandle = osThreadCreate(osThread(RC_Task), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -175,6 +182,24 @@ __weak void Oled_Task_Entry(void const * argument)
     osDelay(1);
   }
   /* USER CODE END Oled_Task_Entry */
+}
+
+/* USER CODE BEGIN Header_RC_Task_Entry */
+/**
+* @brief Function implementing the RC_Task thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_RC_Task_Entry */
+_Noreturn __weak void RC_Task_Entry(void const * argument)
+{
+  /* USER CODE BEGIN RC_Task_Entry */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END RC_Task_Entry */
 }
 
 /* Private application code --------------------------------------------------*/

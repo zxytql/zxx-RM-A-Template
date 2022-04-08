@@ -8,8 +8,13 @@
   *  V1.0.0     2020-02-01          YLT             V1.0 done
   *  V1.0.1     2020-03-16   		YLT               update
   *  V1.1.0     2022-04-05          ZXY               Update
+  *  V1.1.1     2022-04-06          ZXY             bug fixed
   * @verbatim
   * [V1.1.0]
+  * 2022-04-05:
+  * 1. 删去了uart_receive_dma_no_it()函数，直接调用HAL库中的HAL_UART_Receive_DMA
+  * 2. 重写了函数名字
+  * 3. 添加了使用说明
   * ==================================================================================
   *                                 如何使用该支持包
   * ==================================================================================
@@ -55,6 +60,8 @@
   ****************************(C) COPYRIGHT 2020-2022 HCRT****************************
   */
 #include "bsp_usart.h"
+#include "bsp_buzzer.h"
+#include "bsp_led.h"
 
 /****** 串口数据储存数组定义 ******/
 uint8_t usart1_buff[USART1_BUFFLEN];
@@ -81,9 +88,12 @@ void Usart_IdleIRQ_Init(UART_HandleTypeDef *huart)
         /** 开启DMA接收 **/
         HAL_UART_Receive_DMA(&huart1, usart1_buff, USART1_MAX_LEN);
     }
-    else if (huart == &huart6)
+    else if (huart == &huart7)
     {
-
+        /** 使能串口中断 **/
+        __HAL_UART_ENABLE_IT(&huart7, UART_IT_IDLE);
+        /** 开启DMA接收 **/
+        HAL_UART_Receive_DMA(&huart7, uart7_buff, UART7_MAX_LEN);
     }
 }
 
@@ -97,18 +107,18 @@ void Usart_IdleIRQ_Handler(UART_HandleTypeDef *huart)
     if(RESET != __HAL_UART_GET_FLAG(huart, UART_FLAG_IDLE))
     {
         /** 清除空闲中断标识位 否则会一直不断进入中断 **/
-        __HAL_UART_CLEAR_IDLEFLAG(&huart1);
+        __HAL_UART_CLEAR_IDLEFLAG(huart);
 
         /** 关闭DMA传输 **/
-        HAL_UART_DMAStop(huart);
-//        __HAL_DMA_DISABLE(huart->hdmarx);
+//        HAL_UART_DMAStop(huart);
+        __HAL_DMA_DISABLE(huart->hdmarx);
 
         /** 进入空闲中断回调函数 **/
         Usart_IdleIRQ_Callback(huart);
 
         /** 重新启动DMA传输 **/
-//        __HAL_DMA_ENABLE(huart->hdmarx);
-        HAL_UART_Receive_DMA(&huart1, usart1_buff, USART1_MAX_LEN);
+        __HAL_DMA_ENABLE(huart->hdmarx);
+//        HAL_UART_Receive_DMA(huart, usart1_buff, USART1_MAX_LEN);
     }
 }
 
@@ -120,16 +130,34 @@ void Usart_IdleIRQ_Handler(UART_HandleTypeDef *huart)
  */
 void Usart1_Idle_Callback(uint8_t *buff)
 {
-    rc_rx.ch[0] = ((buff[1] | buff[2] << 8) & 0x07FF);
-    rc_rx.ch[1] = ((buff[2] >> 3 | buff[3] << 5) & 0x07FF);
-    rc_rx.ch[2] = ((buff[3] >> 6 | buff[4] << 2 | buff[5] << 10) & 0x07FF);
-    rc_rx.ch[3] = ((buff[5] >> 1 | buff[6] << 7) & 0x07FF);
-    rc_rx.ch[4] = ((buff[6] >> 4 | buff[7] << 4) & 0x07FF);
-    rc_rx.ch[5] = ((buff[7] >> 7 | buff[8] << 1 | buff[9] << 9) & 0x07FF);
-    rc_rx.ch[6] = ((buff[9] >> 2 | buff[10] << 6) & 0x07FF);
-    rc_rx.ch[7] = ((buff[10] >> 5 | buff[11] << 3) & 0x07FF);
-    rc_rx.ch[8] = ((buff[12] | buff[13] << 8) & 0x07FF);
-    rc_rx.ch[9] = ((buff[13] >> 3 | buff[14] << 5) & 0x07FF);
+
+}
+
+void Uart7_Idle_Callback(uint8_t *buff)
+{
+    switch(buff[0])
+    {
+        case 0x43:    //CTIN
+            warn_buzzer();
+            break;
+        case 0x57:    //WALK
+            HAL_GPIO_TogglePin(LED_1_PORT,LED_1_PIN);
+            break;
+        case 0x53:    //STOP
+            HAL_GPIO_TogglePin(LED_5_PORT,LED_5_PIN);
+            break;
+        case 0x46:    //FOLW
+            HAL_GPIO_TogglePin(LED_6_PORT,LED_6_PIN);
+            break;
+        case 0x52:    //RIGH
+            HAL_GPIO_TogglePin(LED_7_PORT,LED_7_PIN);
+            break;
+        case 0x4c:    //LEFT
+            HAL_GPIO_TogglePin(LED_8_PORT,LED_8_PIN);
+            break;
+        default:
+            break;
+    }
 }
 
 /**
@@ -146,6 +174,16 @@ void Usart_IdleIRQ_Callback(UART_HandleTypeDef *huart)
         {
             Usart1_Idle_Callback(usart1_buff);
         }
+        //HAL_UART_Receive_DMA(huart, usart1_buff, USART1_MAX_LEN);
+        __HAL_DMA_SET_COUNTER(huart->hdmarx,USART1_MAX_LEN);
+    }
+    else if (UART7 == huart->Instance)
+    {
+        if (UART7_BUFFLEN == UART7_MAX_LEN - __HAL_DMA_GET_COUNTER(huart->hdmarx))
+        {
+            Uart7_Idle_Callback(uart7_buff);
+        }
+        __HAL_DMA_SET_COUNTER(huart->hdmarx,UART7_MAX_LEN);
     }
 }
 

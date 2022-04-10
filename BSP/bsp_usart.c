@@ -138,7 +138,7 @@ void Uart7_Idle_Callback(uint8_t *buff)
     switch(buff[0])
     {
         case 0x43:    //CTIN
-            warn_buzzer();
+            //warn_buzzer();
             break;
         case 0x57:    //WALK
             HAL_GPIO_TogglePin(LED_1_PORT,LED_1_PIN);

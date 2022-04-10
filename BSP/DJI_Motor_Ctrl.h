@@ -262,7 +262,7 @@ void SetPos(int n, float pos);
 float GetSpeed(void);
 float GetPosPidOut(void);
 float MaxMinLimit(float val, float limit);
-void DriverInit(void);
+void DriverInit(int i, int motor_type, int unit_mode);
 void MotorCtrl(void);
 void HomingMode(DriverType *driver);
 void HomingModeInit(void);
@@ -272,4 +272,7 @@ void VelCtrlTest(float vel, int tim);
 void MotorOffMulti(int n0, int n1, int n2, int n3);
 void MotorOnMulti(int n0, int n1, int n2, int n3);
 void SetCur(int16_t MotorCur0, int16_t MotorCur1, int16_t MotorCur2, int16_t MotorCur3);
+void CanIDInit();
+
+//void CustomMotorInit(int n, int motor_type, int unit_mode);
 #endif

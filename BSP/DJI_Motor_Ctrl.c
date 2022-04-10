@@ -5,8 +5,21 @@
   * @brief      DJI电机控制算法
   * @note       
   * @history
-  *  Version    Date            Author          Modification
+  *  Version        Date        Author          Modification
   *  V1.0.0     2022-01-08       zxy            First version
+  *  V1.1.0     2022-04-10       zxy            修改了初始化方式
+  * @verbatim
+  * [V1.1.0]
+  * 1. 添加了CanIDInit函数，将DriverInit中的初始化部分转移到该函数中，只需执行一次
+  * 2. V1.0.0中的DriverInit函数，执行时会将8个电机全部初始化为同一类型同一控制方式，
+  *    与实际情况不符合，现可以根据需要填入形参，初始化对应电机的类型和控制方式
+  * ============================================================================
+  *                                 使用说明
+  * ============================================================================
+  * 1. 新建一个任务，控制周期需根据实际情况调整osDelay(ms)的值
+  * 2. 在任务初始化部分，添加CanIDInit函数和DriverInit函数
+  * 3. 在任务循环部分执行MotorCtrl函数
+  * 4. 调用SetPos和SetSpeed控制函数即可进行闭环控制，需与电机初始化控制方式相同
   ****************************(C) COPYRIGHT 2022 HCRT****************************
   */
 
@@ -25,51 +38,75 @@ DriverType Driver[8];
 MotorType Motor[8];
 
 /**
- * @brief  板载电机驱动初始化
- * @note   控制前需要运行一次该函数
+ * @brief 初始化Can NodeID，在DriveInit控制任务初始化前需运行一次
+ *
  */
-void DriverInit(void)
+void CanIDInit()
 {
     Driver[0].command.canId = 1;
     Driver[1].command.canId = 2;
     Driver[2].command.canId = 3;
     Driver[3].command.canId = 4;
-    for (int i = 0; i < 8; i++)
-    {
-        Driver[i].status = ENABLE;
-        Driver[i].encoder.period = 8192;
+}
 
-        Driver[i].posCtrl.actualPos = 0.0f;
-        Motor[i].type = RM_3508;
-        MotorOn(i);
+/**
+ * @brief 初始化单个电机控制方式
+ * @param n:            电机ID减1的值
+ * @param motor_type:   电机型号: RM_3508, M_2006
+ * @param unit_mode:    控制方式: SPEED_CONTROL_MODE, POSITION_CONTROL_MODE
+ */
+void DriverInit(int i, int motor_type, int unit_mode)
+{
+//    Driver[0].command.canId = 1;
+//    Driver[1].command.canId = 2;
+//    Driver[2].command.canId = 3;
+//    Driver[3].command.canId = 4;
+    Driver[i].status = ENABLE;
+    Driver[i].encoder.period = 8192;
 
-        if (Motor[i].type == RM_3508)
-        {
-            /*
-             * HOMING_MODE
-             * POSITION_CONTROL_MODE
-             * */
-            //Driver[i].unitMode = SPEED_CONTROL_MODE;
-            Driver[i].unitMode = POSITION_CONTROL_MODE;
-            Driver[i].velCtrl.kp = VEL_KP_3508;
-            Driver[i].velCtrl.ki = VEL_KI_3508;
-            Driver[i].velCtrl.maxOutput = CURRENT_MAX_3508;
-            Driver[i].velCtrl.desiredVel[MAX_V] = VEL_MAX_3508;
-            Driver[i].posCtrl.kd = POS_KD_3508;
-            Driver[i].posCtrl.kp = POS_KP_3508;
-            Driver[i].homingMode.current = 0.8f;
+    Driver[i].posCtrl.actualPos = 0.0f;
+    Motor[i].type = motor_type;
+    MotorOn(i);
 
-            Driver[i].velCtrl.acc = 1000.0f;
-            Driver[i].velCtrl.dec = 1000.0f;
-            Driver[i].velCtrl.desiredVel[CMD] = 0.0f;
-            Driver[i].posCtrl.acc = Driver[i].velCtrl.dec;
-            Driver[i].posCtrl.posVel = 50.0f;
-            Driver[i].homingMode.vel = -160.0f;
-        }
-        else
-        {
-            break;
-        }
+    if (Motor[i].type == RM_3508) {
+        /*
+         * HOMING_MODE
+         * POSITION_CONTROL_MODE
+         * */
+        //Driver[i].unitMode = SPEED_CONTROL_MODE;
+        Driver[i].unitMode = unit_mode;
+        Driver[i].velCtrl.kp = VEL_KP_3508;
+        Driver[i].velCtrl.ki = VEL_KI_3508;
+        Driver[i].velCtrl.maxOutput = CURRENT_MAX_3508;
+        Driver[i].velCtrl.desiredVel[MAX_V] = VEL_MAX_3508;
+        Driver[i].posCtrl.kd = POS_KD_3508;
+        Driver[i].posCtrl.kp = POS_KP_3508;
+        Driver[i].homingMode.current = 0.8f;
+
+        Driver[i].velCtrl.acc = 1000.0f;
+        Driver[i].velCtrl.dec = 1000.0f;
+        Driver[i].velCtrl.desiredVel[CMD] = 0.0f;
+        Driver[i].posCtrl.acc = Driver[i].velCtrl.dec;
+        Driver[i].posCtrl.posVel = 50.0f;
+        Driver[i].homingMode.vel = -160.0f;
+    }
+    else if (Motor[i].type == M_2006) {
+        Driver[i].unitMode = unit_mode;
+        Driver[i].velCtrl.kp = VEL_KP_2006;
+        Driver[i].velCtrl.ki = VEL_KI_2006;
+        Driver[i].velCtrl.maxOutput = CURRENT_MAX_2006;
+        Driver[i].velCtrl.desiredVel[MAX_V] = VEL_MAX_2006;
+        Driver[i].posCtrl.kd = POS_KD_2006;
+        Driver[i].posCtrl.kp = POS_KP_2006;
+        Driver[i].homingMode.current = 0.8f;
+
+        Driver[i].velCtrl.acc = 1000.0f;
+        Driver[i].velCtrl.dec = 1000.0f;
+        Driver[i].velCtrl.desiredVel[CMD] = 0.0f;
+        Driver[i].posCtrl.acc = Driver[i].velCtrl.dec;
+        Driver[i].posCtrl.posVel = 50.0f;
+        Driver[i].homingMode.vel = -160.0f;
+    } else { ;
     }
 }
 
@@ -447,6 +484,18 @@ void MotorOnMulti(int n0, int n1, int n2, int n3)
     MotorOn(n2);
     MotorOn(n3);
 }
+
+/**
+ * @brief 自定义单个电机控制方式
+ * @note  放在DriverInit()之后，用于设定单个电机控制方式
+ * @param n:            电机ID减1的值
+ * @param motor_type:   电机型号: RM_3508, M_2006
+ * @param unit_mode:    控制方式: SPEED_CONTROL_MODE, POSITION_CONTROL_MODE
+ */
+//void CustomMotorInit(int n, int motor_type, int unit_mode);
+//{
+//
+//}
 
 /**
   * @brief          hal库CAN回调函数,接收数据

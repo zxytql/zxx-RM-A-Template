@@ -16,12 +16,14 @@
 #include "bsp_usart.h"
 #include "DJI_Motor_Ctrl.h"
 #include "RC_Task.h"
+#include "bsp_buzzer.h"
 
 uint16_t oled_value = 0;
 uint8_t oled_key_state = 0;
 uint16_t oled_show_value = 0;
 uint8_t key_up = 1;
 uint16_t zxy1;
+
 /* USER CODE BEGIN Header_Oled_Task_Entry */
 /**
 * @brief Oled_Task入口函数
@@ -196,6 +198,7 @@ void Oled_Key_Press_Callback(void)
 //		HAL_UART_Transmit(&huart8,zxy_buf,sizeof(zxy_buf),0xffff);
     //HAL_UART_Transmit_IT(&huart6,zxy_buf,sizeof(zxy_buf));
     //Servo_Ctrl('C',90);
+    Warn_Buzzer();
 }
 
 void Oled_Key_Up_Callback(void)

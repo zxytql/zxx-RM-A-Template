@@ -39,10 +39,6 @@ void IMUWarnBuzzer(void);
 void happy_time(void);
 void promising_young(void);
 
-/**
-  *@brief 警报声
-  *@author zxy
-**/
-void warn_buzzer(void);
-
+void Warn_Buzzer(void);
+void LittleStar_Buzzer(void);
 #endif

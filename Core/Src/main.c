@@ -107,17 +107,18 @@ int main(void)
   MX_USART6_UART_Init();
   MX_USART1_UART_Init();
   MX_CAN2_Init();
+  HAL_TIM_PWM_Start(&htim12,TIM_CHANNEL_1);
   /* USER CODE BEGIN 2 */
-  /** 串口空闲中断初始�? **/
+  /** 串口空闲中断初始化 **/
   Usart_IdleIRQ_Init(&huart1);
   Usart_IdleIRQ_Init(&huart7);
 
-  /** 板载LED初始化状�? **/
+  /** 板载LED初始化状态 **/
   #ifndef BOARD_LED_INIT_ON
   Led_All_Off();
   #endif
 
-  /** Can通讯初始�? **/
+  /** Can通讯初始化 **/
   CAN_Filter_Init();
 
   /* USER CODE END 2 */

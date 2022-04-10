@@ -25,11 +25,16 @@
 _Noreturn void DJI_Motor_Entry(void const * argument)
 {
     /* USER CODE BEGIN DJI_Motor_Entry */
-    DriverInit();
+    CanIDInit();
+    for (int i = 0; i < 1; i++) {
+        DriverInit(i,RM_3508,POSITION_CONTROL_MODE);
+    }
+//    SetPos(1, 8192);
     /* Infinite loop */
     for(;;)
     {
         MotorCtrl();
+//        SetSpeed(0,60);
         HAL_GPIO_TogglePin(LED_1_PORT,LED_1_PIN);
         osDelay(1);
     }

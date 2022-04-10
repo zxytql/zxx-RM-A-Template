@@ -5,11 +5,12 @@
   * @brief      无源蜂鸣器支持包
   * @note
   * 1. 无源蜂鸣器需要1.5~2.5kHz（与蜂鸣器种类有关）的音频信号，这个音频信号即一个高低变化频率为1.5-2.5kHz的方波
-  * 2. 需要开启对应PWM以产生方波
-  * @todo    		暂时移植DJI官方提供的支持包，待完善 --- 2022-03-11
+  * 2. 需要开启对应PWM以产生方波，并且只能在任务中调用
   * @history
   *  Version    Date            Author          Modification
   *  V1.0.0     2022-03-11       zxy            First version
+  * @verbatim
+  *
   ****************************(C) COPYRIGHT 2022 HCRT****************************
   */
 
@@ -133,14 +134,25 @@ void promising_young(void)
 }
 
 /**
-  *@brief 警报声
-  *@author zxy
-**/
-void warn_buzzer(void)
+ * @brief 小星星 部分
+ */
+void LittleStar_Buzzer(void)
 {
 	int sound[] = 
 	{
-		H1,20,M3,20,H1,20 //,M3,50,H1,50,M3,50,H1,50,M3,50,Z0,100
+		//H1,30,M3,30,H1,30,M3,30 //,M3,50,H1,50,M3,50,H1,50,M3,50,Z0,100
+        H1, 50, Z0, 50, H1, 50 , Z0, 50,
+        H5, 50, Z0, 50,H5, 50, Z0, 50,
+        H6, 50,Z0, 50,H6,50, Z0, 50,
+        H5, 100,Z0, 100,
+        H4, 50,Z0, 50, H4,50 ,Z0, 50,
+        H3, 50, Z0, 50, H3, 50, Z0, 50,
+        H2, 50, Z0, 50, H2, 50, Z0, 50,
+        H1, 100,Z0, 100,
+        H5,50,Z0, 50, H5, 50, Z0, 50,
+        H4, 50,Z0, 50, H4, 50, Z0, 50,
+        H3, 50, Z0, 50, H3, 50, Z0, 50,
+        H2, 100 ,Z0, 100,
 	};
 	int length = sizeof(sound)/sizeof(sound[0]);//计算数组长度
   for(int i=0; i<(length/2); i++)//取数组数据
@@ -149,4 +161,22 @@ void warn_buzzer(void)
     HAL_Delay(4*sound[2*i+1]);//音长的时间都乘以5即一拍为500微秒，此值"5"可调整，只是播放的整个快慢而已，有点类似于视频快进和后退
   }
 	buzzer_off();
+}
+
+/**
+ * @brief 警报声
+ */
+void Warn_Buzzer(void)
+{
+    int sound[] =
+            {
+                    H5,30,M7,30,H5,30,M7,30
+            };
+    int length = sizeof(sound)/sizeof(sound[0]);//计算数组长度
+    for(int i=0; i<(length/2); i++)//取数组数据
+    {
+        buzzer_on(sound[2*i], 200);
+        HAL_Delay(4*sound[2*i+1]);//音长的时间都乘以5即一拍为500微秒，此值"5"可调整，只是播放的整个快慢而已，有点类似于视频快进和后退
+    }
+    buzzer_off();
 }

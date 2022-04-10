@@ -3,15 +3,19 @@
   * @file       bsp_servo.c/h
   * @version    V1.0.0
   * @brief      舵机控制支持包
-  * @note       PWM输出通道已经配置为TIM5->CH1.2.3.4，控制频率为50HZ
+  * @history
+  *  Version    Date            Author          Modification
+  *  V1.0.0     2022-01-10       zxy            First version
+  * @verbatim
+  * =============================================================================
+  *                                 使用说明
+  * =============================================================================
+  * 1. PWM输出通道已经配置为TIM5->CH1.2.3.4，控制频率为50HZ
   * A -> TIM5_CH4
   * B -> TIM5_CH3
   * C -> TIM5_CH2
   * D -> TIM5_CH1
   * 控制舵机前需要开启对应通道PWM
-  * @history
-  *  Version    Date            Author          Modification
-  *  V1.0.0     2022-01-10       zxy            First version
   ****************************(C) COPYRIGHT 2022 HCRT****************************
   */
 

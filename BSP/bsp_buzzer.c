@@ -9,6 +9,7 @@
   * @history
   *  Version    Date            Author          Modification
   *  V1.0.0     2022-03-11       zxy            First version
+  *  V1.0.1     2022-04-10       zxy            添加歌曲小星星和警报声
   * @verbatim
   *
   ****************************(C) COPYRIGHT 2022 HCRT****************************

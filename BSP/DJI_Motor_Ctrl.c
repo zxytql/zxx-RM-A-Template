@@ -26,14 +26,12 @@
 #include "DJI_Motor_Ctrl.h"
 #include "bsp_can.h"
 
+#ifdef USING_BOARD_DRIVER
 /****TEST VIR*****/
 int test1 = 0;
 int test2 = 0;
 
-/*****************/
-#ifdef USING_BOARD_DRIVER
-extern CAN_HandleTypeDef hcan1;
-extern CAN_HandleTypeDef hcan2;
+/******** Global Variables *********/
 DriverType Driver[8];
 MotorType Motor[8];
 
@@ -41,12 +39,16 @@ MotorType Motor[8];
  * @brief 初始化Can NodeID，在DriveInit控制任务初始化前需运行一次
  *
  */
-void CanIDInit()
+void CanId_Init()
 {
     Driver[0].command.canId = 1;
     Driver[1].command.canId = 2;
     Driver[2].command.canId = 3;
     Driver[3].command.canId = 4;
+    Driver[4].command.canId = 5;
+    Driver[5].command.canId = 6;
+    Driver[6].command.canId = 7;
+    Driver[7].command.canId = 8;
 }
 
 /**
@@ -57,10 +59,6 @@ void CanIDInit()
  */
 void DriverInit(int i, int motor_type, int unit_mode)
 {
-//    Driver[0].command.canId = 1;
-//    Driver[1].command.canId = 2;
-//    Driver[2].command.canId = 3;
-//    Driver[3].command.canId = 4;
     Driver[i].status = ENABLE;
     Driver[i].encoder.period = 8192;
 
@@ -116,14 +114,14 @@ void DriverInit(int i, int motor_type, int unit_mode)
  */
 void MotorCtrl(void)
 {
-    float PerCur[4] = { 0.0f };
+    float PerCur[8] = { 0.0f };
 
-    for (int i = 0; i < 8; i++)
+    for (int i = 0; i < 8; ++i)
     {
         if (Motor[i].type == NONE)
             break;
 
-        CalculSpeed_Pos(&Driver[i], &Motor[i]);
+        CalculateSpeed_Pos(&Driver[i], &Motor[i]);
 
         if (Driver[i].status != ENABLE)
         {
@@ -133,26 +131,26 @@ void MotorCtrl(void)
 
         switch (Driver[i].unitMode)
         {
-        case POSITION_CONTROL_MODE:
-            PosCtrl(&Driver[i].posCtrl);
-            Driver[i].velCtrl.desiredVel[CMD] = Driver[i].posCtrl.output;
-            VelSlope(&Driver[i].velCtrl);
-            Driver[i].output = VelPidCtrl(&Driver[i].velCtrl);
-            break;
-        case SPEED_CONTROL_MODE:
-            VelSlope(&Driver[i].velCtrl);
-            Driver[i].output = VelPidCtrl(&Driver[i].velCtrl);
-            break;
-        case HOMING_MODE:
-            HomingMode(&Driver[i]);
-            Driver[i].output = Driver[i].homingMode.output;
-            break;
-        default:
-            break;
+            case POSITION_CONTROL_MODE:
+                PosCtrl(&Driver[i].posCtrl);
+                Driver[i].velCtrl.desiredVel[CMD] = Driver[i].posCtrl.output;
+                VelSlope(&Driver[i].velCtrl);
+                Driver[i].output = VelPidCtrl(&Driver[i].velCtrl);
+                break;
+            case SPEED_CONTROL_MODE:
+                VelSlope(&Driver[i].velCtrl);
+                Driver[i].output = VelPidCtrl(&Driver[i].velCtrl);
+                break;
+            case HOMING_MODE:
+                HomingMode(&Driver[i]);
+                Driver[i].output = Driver[i].homingMode.output;
+                break;
+            default:
+                break;
         }
     }
 
-    for (int i = 0; i < 4; i++)
+    for (int i = 0; i < 8; ++i)
     {
         if (Motor[i].type == RM_3508)
             PerCur[i] = Driver[i].output * 16384.0f / 20.0f;
@@ -161,8 +159,14 @@ void MotorCtrl(void)
         else
             PerCur[i] = 0.0f;
     }
-		SetCur((int16_t) PerCur[0], (int16_t) PerCur[1], (int16_t) PerCur[2], (int16_t) PerCur[3]);
-
+    if (!PerCur[0] || !PerCur[1] || !PerCur[2] || !PerCur[3])
+    {
+        SetCur((int16_t) PerCur[0], (int16_t) PerCur[1], (int16_t) PerCur[2], (int16_t) PerCur[3]);
+    }
+    if (!PerCur[4] || !PerCur[5] || !PerCur[6] || !PerCur[7])
+    {
+        SetCur1((int16_t) PerCur[4], (int16_t) PerCur[5], (int16_t) PerCur[6], (int16_t) PerCur[7]);
+    }
 }
 
 /**
@@ -173,31 +177,64 @@ void MotorCtrl(void)
   */
 void SetCur(int16_t MotorCur0, int16_t MotorCur1, int16_t MotorCur2, int16_t MotorCur3)
 {
-	test1++;
-	uint32_t TxMailbox;
-  CAN_TxHeaderTypeDef TxHeader;
-  uint8_t TxMessage[8];
+    test1++;
+    uint32_t TxMailbox;
+    CAN_TxHeaderTypeDef TxHeader;
+    uint8_t TxMessage[8];
 
 
-  TxHeader.StdId = 0x200;         // standard identifier=0
-  TxHeader.ExtId = 0x200;         // extended identifier=StdId
-  TxHeader.IDE = CAN_ID_STD; // type of identifier for the message is Standard
-  TxHeader.RTR = CAN_RTR_DATA;    // the type of frame for the message that will be transmitted
-  TxHeader.DLC = 8;
+    TxHeader.StdId = 0x200;         // standard identifier=0
+    TxHeader.ExtId = 0x200;         // extended identifier=StdId
+    TxHeader.IDE = CAN_ID_STD; // type of identifier for the message is Standard
+    TxHeader.RTR = CAN_RTR_DATA;    // the type of frame for the message that will be transmitted
+    TxHeader.DLC = 8;
 
-  TxMessage[0] = MotorCur0 >> 8;
-  TxMessage[1] = MotorCur0;
-  TxMessage[2] = MotorCur1 >> 8;
-  TxMessage[3] = MotorCur1;
-  TxMessage[4] = MotorCur2 >> 8;
-  TxMessage[5] = MotorCur2;
-  TxMessage[6] = MotorCur3 >> 8;
-  TxMessage[7] = MotorCur3;
+    TxMessage[0] = MotorCur0 >> 8;
+    TxMessage[1] = MotorCur0;
+    TxMessage[2] = MotorCur1 >> 8;
+    TxMessage[3] = MotorCur1;
+    TxMessage[4] = MotorCur2 >> 8;
+    TxMessage[5] = MotorCur2;
+    TxMessage[6] = MotorCur3 >> 8;
+    TxMessage[7] = MotorCur3;
 
-  //CAN_Transmit_Messages_Byte(&hcan1,TxHeader.StdId,TxMessage[0],TxMessage[1],TxMessage[2],TxMessage[3],TxMessage[4],TxMessage[5],TxMessage[6],TxMessage[7]);
-	HAL_CAN_AddTxMessage(&hcan1, &TxHeader, TxMessage, &TxMailbox);
+    //CAN_Transmit_Messages_Byte(&hcan1,TxHeader.StdId,TxMessage[0],TxMessage[1],TxMessage[2],TxMessage[3],TxMessage[4],TxMessage[5],TxMessage[6],TxMessage[7]);
+    HAL_CAN_AddTxMessage(&hcan1, &TxHeader, TxMessage, &TxMailbox);
 }
 
+/**
+ * @brief
+ * @param MotorCur4
+ * @param MotorCur5
+ * @param MotorCur6
+ * @param MotorCur7
+ */
+void SetCur1(int16_t MotorCur4, int16_t MotorCur5, int16_t MotorCur6, int16_t MotorCur7)
+{
+    test1++;
+    uint32_t TxMailbox;
+    CAN_TxHeaderTypeDef TxHeader;
+    uint8_t TxMessage[8];
+
+
+    TxHeader.StdId = 0x1ff;         // standard identifier=0
+    TxHeader.ExtId = 0x1ff;         // extended identifier=StdId
+    TxHeader.IDE = CAN_ID_STD; // type of identifier for the message is Standard
+    TxHeader.RTR = CAN_RTR_DATA;    // the type of frame for the message that will be transmitted
+    TxHeader.DLC = 8;
+
+    TxMessage[0] = MotorCur4 >> 8;
+    TxMessage[1] = MotorCur4;
+    TxMessage[2] = MotorCur5 >> 8;
+    TxMessage[3] = MotorCur5;
+    TxMessage[4] = MotorCur6 >> 8;
+    TxMessage[5] = MotorCur6;
+    TxMessage[6] = MotorCur7 >> 8;
+    TxMessage[7] = MotorCur7;
+
+    //CAN_Transmit_Messages_Byte(&hcan1,TxHeader.StdId,TxMessage[0],TxMessage[1],TxMessage[2],TxMessage[3],TxMessage[4],TxMessage[5],TxMessage[6],TxMessage[7]);
+    HAL_CAN_AddTxMessage(&hcan1, &TxHeader, TxMessage, &TxMailbox);
+}
 /**
  * @brief  速度斜坡输入
  * @param  None
@@ -363,7 +400,7 @@ float GetPosPidOut(void)
  * @param  None
  * @retval Subtraction number between every two times.
  **/
-float CalculSpeed_Pos(DriverType *driver, MotorType *motor)
+float CalculateSpeed_Pos(DriverType *driver, MotorType *motor)
 {
     int deltaPos = 0;
     deltaPos = (motor->pos - motor->posLast);
@@ -394,7 +431,7 @@ void SetSpeed(int n, float rpm)
 
 void SetPos(int n, float pos)
 {
-	Driver[n].posCtrl.desiredPos = pos;
+    Driver[n].posCtrl.desiredPos = pos;
 }
 
 /**
@@ -504,21 +541,21 @@ void MotorOnMulti(int n0, int n1, int n2, int n3)
   */
 void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 {
-	static CAN_RxPacketTypeDef packet;
-	#ifdef USING_BOARD_DRIVER
-	test2++;
-	uint8_t u = 0;
-	HAL_CAN_GetRxMessage(hcan,CAN_RX_FIFO0,&packet.hdr,packet.data);
-	if ((packet.hdr.StdId == 0x201) || (packet.hdr.StdId == 0x202) || (packet.hdr.StdId == 0x203) || (packet.hdr.StdId == 0x204) || //
-					(packet.hdr.StdId == 0x205) || (packet.hdr.StdId == 0x206) || (packet.hdr.StdId == 0x207) || (packet.hdr.StdId == 0x208))
-	{
-			u = packet.hdr.StdId - 0x201;
-			Motor[u].pos = (packet.data[0] << 8) + packet.data[1];
-			Motor[u].vel = (int16_t) (packet.data[2] << 8) + packet.data[3];
-			Motor[u].cur = (packet.data[4] << 8) + packet.data[5];
-			Motor[u].temp = packet.data[6];
-	}
-	#endif
+    static CAN_RxPacketTypeDef packet;
+#ifdef USING_BOARD_DRIVER
+    test2++;
+    uint8_t u = 0;
+    HAL_CAN_GetRxMessage(hcan,CAN_RX_FIFO0,&packet.hdr,packet.data);
+    if ((packet.hdr.StdId == 0x201) || (packet.hdr.StdId == 0x202) || (packet.hdr.StdId == 0x203) || (packet.hdr.StdId == 0x204) || //
+        (packet.hdr.StdId == 0x205) || (packet.hdr.StdId == 0x206) || (packet.hdr.StdId == 0x207) || (packet.hdr.StdId == 0x208))
+    {
+        u = packet.hdr.StdId - 0x201;
+        Motor[u].pos = (packet.data[0] << 8) + packet.data[1];
+        Motor[u].vel = (int16_t) (packet.data[2] << 8) + packet.data[3];
+        Motor[u].cur = (packet.data[4] << 8) + packet.data[5];
+        Motor[u].temp = packet.data[6];
+    }
+#endif
 }
 
 #endif

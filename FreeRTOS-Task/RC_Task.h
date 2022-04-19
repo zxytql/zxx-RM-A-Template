@@ -67,7 +67,7 @@ typedef struct
 
     _Bool online;        /** 存储遥控器是否在线 **/
     uint8_t state;       /** 存储遥控器控制状态 **/
-    int16_t zxy1;        /** 测试用 **/
+    int16_t test;        /** 测试用 **/
 }rc_t;
 /******** Extern ********/
 extern rc_t rc;

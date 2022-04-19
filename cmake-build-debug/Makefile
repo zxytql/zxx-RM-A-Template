@@ -248,6 +248,30 @@ BSP/bsp_oled.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/BSP/bsp_oled.c.s
 .PHONY : BSP/bsp_oled.c.s
 
+BSP/bsp_omni_chassis.obj: BSP/bsp_omni_chassis.c.obj
+.PHONY : BSP/bsp_omni_chassis.obj
+
+# target to build an object file
+BSP/bsp_omni_chassis.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/BSP/bsp_omni_chassis.c.obj
+.PHONY : BSP/bsp_omni_chassis.c.obj
+
+BSP/bsp_omni_chassis.i: BSP/bsp_omni_chassis.c.i
+.PHONY : BSP/bsp_omni_chassis.i
+
+# target to preprocess a source file
+BSP/bsp_omni_chassis.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/BSP/bsp_omni_chassis.c.i
+.PHONY : BSP/bsp_omni_chassis.c.i
+
+BSP/bsp_omni_chassis.s: BSP/bsp_omni_chassis.c.s
+.PHONY : BSP/bsp_omni_chassis.s
+
+# target to generate assembly for a file
+BSP/bsp_omni_chassis.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/BSP/bsp_omni_chassis.c.s
+.PHONY : BSP/bsp_omni_chassis.c.s
+
 BSP/bsp_servo.obj: BSP/bsp_servo.c.obj
 .PHONY : BSP/bsp_servo.obj
 
@@ -1504,6 +1528,9 @@ help:
 	@echo ... BSP/bsp_oled.obj
 	@echo ... BSP/bsp_oled.i
 	@echo ... BSP/bsp_oled.s
+	@echo ... BSP/bsp_omni_chassis.obj
+	@echo ... BSP/bsp_omni_chassis.i
+	@echo ... BSP/bsp_omni_chassis.s
 	@echo ... BSP/bsp_servo.obj
 	@echo ... BSP/bsp_servo.i
 	@echo ... BSP/bsp_servo.s

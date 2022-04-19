@@ -246,6 +246,9 @@ typedef struct
 #define  CAN_ID_NUM     5
 //自动5号初始  电流为2.5其余为1.5
 
+/******** Extern ********/
+extern DriverType Driver[8];
+extern MotorType Motor[8];
 /* Exported functions ------------------------------------------------------- */
 float OutPutLim(float val);
 float VelSlope(VelCtrlType *velPid);
@@ -255,7 +258,7 @@ float PosCtrl(PosCtrlType *posPid);
 void VelCtrlInit(void);
 void PosCtrlInit(void);
 //float     CalculSpeed(void);
-float CalculSpeed_Pos(DriverType *driver, MotorType *motor);
+float CalculateSpeed_Pos(DriverType *driver, MotorType *motor);
 float GetVelPidOut(void);
 void SetSpeed(int n, float rpm);
 void SetPos(int n, float pos);
@@ -272,7 +275,8 @@ void VelCtrlTest(float vel, int tim);
 void MotorOffMulti(int n0, int n1, int n2, int n3);
 void MotorOnMulti(int n0, int n1, int n2, int n3);
 void SetCur(int16_t MotorCur0, int16_t MotorCur1, int16_t MotorCur2, int16_t MotorCur3);
-void CanIDInit();
+void SetCur1(int16_t MotorCur4, int16_t MotorCur5, int16_t MotorCur6, int16_t MotorCur7);
+void CanId_Init();
 
 //void CustomMotorInit(int n, int motor_type, int unit_mode);
 #endif

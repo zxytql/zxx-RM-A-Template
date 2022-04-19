@@ -7,7 +7,8 @@
   * @history
   *  Version    Date            Author          Modification
   *  V1.0.0     2022-01-08       zxy            First version
-  *  V1.0.1     2022-01-10       zxy            Added keys debounce
+  *  V1.0.1     2022-01-10       zxy             添加按键消抖
+  *  V1.1.0     2022-03-31       zxy             优化按键逻辑
   ****************************(C) COPYRIGHT 2022 HCRT****************************
   */
 #include "Oled_Task.h"
@@ -55,7 +56,7 @@ _Noreturn void Oled_Task_Entry(void const * argument)
         oled_drawline(0,62,127,62,Pen_Write);  //Draw frame
         //oled_LOGO();
         //oled_printf(1,1,"Now_value: ");
-        oled_showstring(1,1,"TEST:");
+        oled_showstring(1,1,"Motor1_Speed:");
         oled_showstring(2,1,"key_state:");
         oled_showstring(3,1,"key_value:");
         //********************//
@@ -68,7 +69,7 @@ _Noreturn void Oled_Task_Entry(void const * argument)
 //            oled_show_value = rc.rc_KeyValue.right_vir_roll;
 //        }
         //********************//
-        oled_shownum(1,11,rc.zxy1,0x00,5);
+        oled_shownum(1,11,(Motor->vel / 19.2f),0x00,5);
         oled_shownum(2,11,rc.rc_KeyValue.key_d,0x00,5);
         oled_shownum(3,11,oled_value,0x00,5);
 #endif
@@ -193,24 +194,17 @@ void Oled_Action(uint8_t state)
 
 void Oled_Key_Press_Callback(void)
 {
-//		uint8_t zxy_buf[]= "CTIN";
-//		zxy1 = sizeof(zxy_buf);
-//		HAL_UART_Transmit(&huart8,zxy_buf,sizeof(zxy_buf),0xffff);
-    //HAL_UART_Transmit_IT(&huart6,zxy_buf,sizeof(zxy_buf));
-    //Servo_Ctrl('C',90);
-    Warn_Buzzer();
+
 }
 
 void Oled_Key_Up_Callback(void)
 {
-    zxy1++;
-    SetPos(0,4096 * zxy1);
+
 }
 
 void Oled_Key_Down_Callback(void)
 {
-    if(zxy1 > 0) {zxy1--;};
-    SetPos(0,4096 * zxy1);
+
 }
 
 void Oled_Key_Left_Callback(void)

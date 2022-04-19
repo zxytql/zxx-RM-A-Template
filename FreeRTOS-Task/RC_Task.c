@@ -5,7 +5,7 @@
   * @note
   * @history
   *  Version    Date            Author          Modification
-  *  V1.0.0     2022-01-08       zxy            First version
+  *  V1.0.0     2022-04-05       zxy            First version
   ****************************(C) COPYRIGHT 2022 HCRT****************************
   */
 #include "RC_Task.h"
@@ -24,7 +24,7 @@ rc_t rc;
 _Noreturn void RC_Task_Entry(void const * argument)
 {
     /* USER CODE BEGIN RC_Task_Entry */
-    rc.zxy1 = 0;
+    rc.test = 0;
     /* Infinite loop */
     for(;;)
     {
@@ -161,5 +161,5 @@ void Rc_Key_b_Callback()
 
 void Rc_Key_d_Callback()
 {
-    rc.zxy1++;
+    rc.test++;
 }

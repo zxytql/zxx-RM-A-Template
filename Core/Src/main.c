@@ -107,18 +107,17 @@ int main(void)
   MX_USART6_UART_Init();
   MX_USART1_UART_Init();
   MX_CAN2_Init();
-  HAL_TIM_PWM_Start(&htim12,TIM_CHANNEL_1);
   /* USER CODE BEGIN 2 */
-  /** 串口空闲中断初始化 **/
+  /** Usart IRQ Init **/
   Usart_IdleIRQ_Init(&huart1);
   Usart_IdleIRQ_Init(&huart7);
 
-  /** 板载LED初始化状态 **/
+  /** Board LED Init **/
   #ifndef BOARD_LED_INIT_ON
   Led_All_Off();
   #endif
 
-  /** Can通讯初始化 **/
+  /** Can Filter Init **/
   CAN_Filter_Init();
 
   /* USER CODE END 2 */
@@ -156,12 +155,11 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
-  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
-  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+  RCC_OscInitStruct.HSEState = RCC_HSE_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
-  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
-  RCC_OscInitStruct.PLL.PLLM = 8;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+  RCC_OscInitStruct.PLL.PLLM = 6;
   RCC_OscInitStruct.PLL.PLLN = 168;
   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
   RCC_OscInitStruct.PLL.PLLQ = 4;

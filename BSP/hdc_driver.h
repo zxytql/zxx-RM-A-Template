@@ -3,7 +3,7 @@
 
 #include "stm32f4xx.h"
 #include "arm_math.h"
-#include "../board_config.h"
+#include "board_config.h"
 
 //ELMO驱动器CAN广播ID号
 #define ELMO_BROADCAST_ID  (0x000)

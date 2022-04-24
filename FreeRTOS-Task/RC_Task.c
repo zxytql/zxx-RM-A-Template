@@ -10,6 +10,8 @@
   */
 #include "RC_Task.h"
 #include "cmsis_os.h"
+#include "DJI_Motor_Ctrl.h"
+#include "bsp_power_ctrl.h"
 
 /******* Global Variables ********/
 rc_t rc;
@@ -31,8 +33,7 @@ _Noreturn void RC_Task_Entry(void const * argument)
         Rc_Update(&rc.rc_KeyValue, usart1_buff);
         Rc_Key_Handler(&rc.rc_KeyValue,&rc.rc_key_event);
         Rc_Key_Callback_Handler(&rc.rc_key_event);
-
-        osDelay(1);
+        osDelay(10);
     }
     /* USER CODE END RC_Task_Entry */
 }
@@ -72,6 +73,13 @@ void Rc_Update(rc_keyValue_t *value, uint8_t buff[25])
 
     rc.rc_KeyValue.left_knob        = RC_KNOB_TRANS(rc_rx.ch[6], 306, 1694);
     rc.rc_KeyValue.right_knob       = RC_KNOB_TRANS(rc_rx.ch[7], 306, 1694);
+    if (rc.online == Offline)
+    {
+        rc.rc_KeyValue.left_horz_roll   = 0;
+        rc.rc_KeyValue.left_vir_roll    = 0;
+        rc.rc_KeyValue.right_horz_roll  = 0;
+        rc.rc_KeyValue.right_vir_roll   = 0;
+    }
 }
 
 /**
@@ -107,17 +115,27 @@ void Rc_Key_Handler(rc_keyValue_t *value, rc_key_event_t *event)
         event->key_b_now = 0;
     }
 
-    if(value->key_d == 1) /** 按钮D被拨下 **/
+//    if(value->key_d == 1) /** 按钮D被拨下 **/
+//    {
+//        if(event->key_d_now == 0)
+//        {
+//            event->key_d_now = 1;
+//            event->key_d_flag = 1;
+//        }
+//    }
+//    else
+//    {
+//        event->key_d_now = 0;
+//    }
+    if (value->key_d == 1 && rc.power_state == 0)
     {
-        if(event->key_d_now == 0)
-        {
-            event->key_d_now = 1;
-            event->key_d_flag = 1;
-        }
+        rc.power_state = 1;
+        BoardPowerOn();
     }
-    else
+    else if(value->key_d == 0 && rc.power_state == 1)
     {
-        event->key_d_now = 0;
+        rc.power_state = 0;
+        BoardPowerOff();
     }
 }
 
@@ -151,7 +169,7 @@ void Rc_Key_Callback_Handler(rc_key_event_t *event)
  */
 void Rc_Key_a_Callback()
 {
-
+    SetPos(0,0);
 }
 
 void Rc_Key_b_Callback()
@@ -161,5 +179,5 @@ void Rc_Key_b_Callback()
 
 void Rc_Key_d_Callback()
 {
-    rc.test++;
+
 }

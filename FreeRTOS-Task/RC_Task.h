@@ -3,6 +3,7 @@
 
 #include "stm32f4xx.h"
 #include "bsp_usart.h"
+#include "bsp_omni_chassis.h"
 
 #define RC_DEADZONE 10
 #define RC_VALUE_OFFSET 1024
@@ -66,6 +67,7 @@ typedef struct
     rc_key_event_t rc_key_event;
 
     _Bool online;        /** 存储遥控器是否在线 **/
+    uint8_t power_state; /** 储存按钮D控制的板载电源状态 **/
     uint8_t state;       /** 存储遥控器控制状态 **/
     int16_t test;        /** 测试用 **/
 }rc_t;
@@ -79,4 +81,5 @@ void Rc_Key_Callback_Handler(rc_key_event_t *event);
 void Rc_Key_a_Callback();
 void Rc_Key_b_Callback();
 void Rc_Key_d_Callback();
+
 #endif //RC_TASK_H

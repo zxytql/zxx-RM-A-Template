@@ -26,6 +26,9 @@ _Noreturn void DJI_Motor_Entry(void const * argument)
 {
     /* USER CODE BEGIN DJI_Motor_Entry */
     CanId_Init();
+    for (int i = 0; i < 3; ++i) {
+        DriverInit(i,RM_3508,SPEED_CONTROL_MODE);
+    }
 
 //    SetPos(0, 8192);
     /* Infinite loop */

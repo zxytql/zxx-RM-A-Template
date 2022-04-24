@@ -23,11 +23,11 @@ chassis_t chassis;
 void kinematics_inverse_omni3(chassis_t *ptr)
 {
     if (ptr == NULL) { return; }
-    ptr->wheel_speed[0] = -ptr->chassis_ct.ct_vx + WHEEL3_TO_CENT * ptr->chassis_ct.ct_wz;
-    ptr->wheel_speed[1] = ptr->chassis_ct.ct_vx * SIN_30 - ptr->chassis_ct.ct_vy * COS_30 +
-                          WHEEL3_TO_CENT * ptr->chassis_ct.ct_wz;
-    ptr->wheel_speed[2] = ptr->chassis_ct.ct_vx * SIN_30 + ptr->chassis_ct.ct_vy * COS_30 +
-                          WHEEL3_TO_CENT * ptr->chassis_ct.ct_wz;
+    ptr->wheel_speed[0] = -(-ptr->chassis_ct.ct_vx + WHEEL3_TO_CENT * ptr->chassis_ct.ct_wz);
+    ptr->wheel_speed[1] = -(ptr->chassis_ct.ct_vx * SIN_30 - ptr->chassis_ct.ct_vy * COS_30 +
+                          WHEEL3_TO_CENT * ptr->chassis_ct.ct_wz);
+    ptr->wheel_speed[2] = -(ptr->chassis_ct.ct_vx * SIN_30 + ptr->chassis_ct.ct_vy * COS_30 +
+                          WHEEL3_TO_CENT * ptr->chassis_ct.ct_wz);
 
     for (int i = 0; i < 3; ++i) {
         ptr->wheel_speed[i] *= SHAFT_RPM_TO_WHEEL;

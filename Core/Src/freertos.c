@@ -49,8 +49,9 @@
 /* USER CODE END Variables */
 osThreadId defaultTaskHandle;
 osThreadId DJI_Motor_TaskHandle;
-osThreadId Oled_TaskHandle;
+osThreadId OLED_TaskHandle;
 osThreadId RC_TaskHandle;
+osThreadId Chassis_TaskHandle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -59,8 +60,9 @@ osThreadId RC_TaskHandle;
 
 void StartDefaultTask(void const * argument);
 void DJI_Motor_Entry(void const * argument);
-void Oled_Task_Entry(void const * argument);
+void OLED_Task_Entry(void const * argument);
 void RC_Task_Entry(void const * argument);
+void Chassis_Task_Entry(void const * argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -115,13 +117,17 @@ void MX_FREERTOS_Init(void) {
   osThreadDef(DJI_Motor_Task, DJI_Motor_Entry, osPriorityLow, 0, 128);
   DJI_Motor_TaskHandle = osThreadCreate(osThread(DJI_Motor_Task), NULL);
 
-  /* definition and creation of Oled_Task */
-  osThreadDef(Oled_Task, Oled_Task_Entry, osPriorityHigh, 0, 128);
-  Oled_TaskHandle = osThreadCreate(osThread(Oled_Task), NULL);
+  /* definition and creation of OLED_Task */
+  osThreadDef(OLED_Task, OLED_Task_Entry, osPriorityHigh, 0, 128);
+  OLED_TaskHandle = osThreadCreate(osThread(OLED_Task), NULL);
 
   /* definition and creation of RC_Task */
   osThreadDef(RC_Task, RC_Task_Entry, osPriorityHigh, 0, 128);
   RC_TaskHandle = osThreadCreate(osThread(RC_Task), NULL);
+
+  /* definition and creation of Chassis_Task */
+  osThreadDef(Chassis_Task, Chassis_Task_Entry, osPriorityAboveNormal, 0, 128);
+  Chassis_TaskHandle = osThreadCreate(osThread(Chassis_Task), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -165,22 +171,22 @@ __weak void DJI_Motor_Entry(void const * argument)
   /* USER CODE END DJI_Motor_Entry */
 }
 
-/* USER CODE BEGIN Header_Oled_Task_Entry */
+/* USER CODE BEGIN Header_OLED_Task_Entry */
 /**
-* @brief Function implementing the Oled_Task thread.
+* @brief Function implementing the OLED_Task thread.
 * @param argument: Not used
 * @retval None
 */
-/* USER CODE END Header_Oled_Task_Entry */
-__weak void Oled_Task_Entry(void const * argument)
+/* USER CODE END Header_OLED_Task_Entry */
+__weak void OLED_Task_Entry(void const * argument)
 {
-  /* USER CODE BEGIN Oled_Task_Entry */
+  /* USER CODE BEGIN OLED_Task_Entry */
   /* Infinite loop */
   for(;;)
   {
     osDelay(1);
   }
-  /* USER CODE END Oled_Task_Entry */
+  /* USER CODE END OLED_Task_Entry */
 }
 
 /* USER CODE BEGIN Header_RC_Task_Entry */
@@ -199,6 +205,24 @@ __weak void RC_Task_Entry(void const * argument)
     osDelay(1);
   }
   /* USER CODE END RC_Task_Entry */
+}
+
+/* USER CODE BEGIN Header_Chassis_Task_Entry */
+/**
+* @brief Function implementing the Chassis_Task thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_Chassis_Task_Entry */
+__weak void Chassis_Task_Entry(void const * argument)
+{
+  /* USER CODE BEGIN Chassis_Task_Entry */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END Chassis_Task_Entry */
 }
 
 /* Private application code --------------------------------------------------*/

@@ -1,7 +1,7 @@
 #ifndef _BSP_BUZZER_H_
 #define _BSP_BUZZER_H_
 
-#include "stm32f4xx.h"
+#include "main.h"
 
 #define  proport          100000 //Tclk/(psc+1)=180000000/(89+1)
 #define  L1       ((proport/131)-1)//低调　do 的周期根据Tout= ((arr+1)*(psc+1))/Tclk推出arr值就是本句define定义的值，Tout为音调频率131Hz的倒数，Tclk=72MHz

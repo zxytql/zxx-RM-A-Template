@@ -1,7 +1,7 @@
 #ifndef BSP_POWER_CTRL_H
 #define BSP_POWER_CTRL_H
 
-#include "stm32f4xx.h"
+#include "main.h"
 
 void BoardPowerOn(void);
 void BoardPowerOff(void);

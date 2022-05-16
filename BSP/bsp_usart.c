@@ -62,14 +62,15 @@
 #include "bsp_usart.h"
 #include "bsp_buzzer.h"
 #include "bsp_led.h"
-
+#include "bsp_ops.h"
+#include "bsp_ops.h"
 /****** 串口数据储存数组定义 ******/
 uint8_t usart1_buff[USART1_BUFFLEN];
 //uint8_t usart2_buff[USART2_BUFFLEN];
 //uint8_t usart3_buff[USART3_BUFFLEN];
 //uint8_t usart6_buff[USART6_BUFFLEN];
 uint8_t uart7_buff[UART7_BUFFLEN];
-//uint8_t uart8_buff[UART8_BUFFLEN];
+uint8_t uart8_buff[UART8_BUFFLEN];
 
 /******** 数据结构体 ********/
 rc_rx_t rc_rx;
@@ -94,6 +95,13 @@ void Usart_IdleIRQ_Init(UART_HandleTypeDef *huart)
         __HAL_UART_ENABLE_IT(&huart7, UART_IT_IDLE);
         /** 开启DMA接收 **/
         HAL_UART_Receive_DMA(&huart7, uart7_buff, UART7_MAX_LEN);
+    }
+    else if (huart == &huart8)
+    {
+        /** 使能串口中断 **/
+        __HAL_UART_ENABLE_IT(&huart8, UART_IT_IDLE);
+        /** 开启DMA接收 **/
+        HAL_UART_Receive_DMA(&huart8, uart8_buff, UART8_MAX_LEN);
     }
 }
 
@@ -160,6 +168,10 @@ void Uart7_Idle_Callback(uint8_t *buff)
     }
 }
 
+void Uart8_Idle_Callback(uint8_t *buff)
+{
+    Ops_Frame_Parse(&ops_data,buff);
+}
 /**
  * @brief   空闲中断回调函数
  * @param   huart: 串口
@@ -184,6 +196,14 @@ void Usart_IdleIRQ_Callback(UART_HandleTypeDef *huart)
             Uart7_Idle_Callback(uart7_buff);
         }
         __HAL_DMA_SET_COUNTER(huart->hdmarx,UART7_MAX_LEN);
+    }
+    else if (UART8 == huart->Instance)
+    {
+        if (UART8_BUFFLEN == UART8_MAX_LEN - __HAL_DMA_GET_COUNTER(huart->hdmarx))
+        {
+            Uart8_Idle_Callback(uart8_buff);
+        }
+        __HAL_DMA_SET_COUNTER(huart->hdmarx,UART8_MAX_LEN);
     }
 }
 

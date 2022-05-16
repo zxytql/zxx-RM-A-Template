@@ -1,7 +1,7 @@
 #ifndef _DJI_MOTOR_CTRL_H
 #define _DJI_MOTOR_CTRL_H
 
-#include "stm32f4xx.h"
+#include "main.h"
 #include "math.h"
 #include "board_config.h"
 typedef enum

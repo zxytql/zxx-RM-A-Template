@@ -18,13 +18,13 @@ typedef enum
 {
     Offline = 0,
     Online
-}rc_state_t;
+}rc_state_e;
 
 typedef enum
 {
     Control_state = 0,
     Navigation_state
-}rc_ctrl_state_t;
+}rc_ctrl_state_e;
 
 typedef struct
 {
@@ -61,8 +61,8 @@ typedef struct
 
 typedef struct
 {
-    rc_state_t rc_state;
-    rc_ctrl_state_t rc_ctrl_state;
+    rc_state_e rc_state;
+    rc_ctrl_state_e rc_ctrl_state;
     rc_keyValue_t rc_KeyValue;
     rc_key_event_t rc_key_event;
 

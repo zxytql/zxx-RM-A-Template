@@ -111,7 +111,7 @@ int main(void)
   /** Usart IRQ Init **/
   Usart_IdleIRQ_Init(&huart1);
   Usart_IdleIRQ_Init(&huart7);
-
+  Usart_IdleIRQ_Init(&huart8);
   /** Board LED Init **/
   #ifndef BOARD_LED_INIT_ON
   Led_All_Off();

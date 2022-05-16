@@ -272,6 +272,30 @@ BSP/bsp_omni_chassis.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/BSP/bsp_omni_chassis.c.s
 .PHONY : BSP/bsp_omni_chassis.c.s
 
+BSP/bsp_ops.obj: BSP/bsp_ops.c.obj
+.PHONY : BSP/bsp_ops.obj
+
+# target to build an object file
+BSP/bsp_ops.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/BSP/bsp_ops.c.obj
+.PHONY : BSP/bsp_ops.c.obj
+
+BSP/bsp_ops.i: BSP/bsp_ops.c.i
+.PHONY : BSP/bsp_ops.i
+
+# target to preprocess a source file
+BSP/bsp_ops.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/BSP/bsp_ops.c.i
+.PHONY : BSP/bsp_ops.c.i
+
+BSP/bsp_ops.s: BSP/bsp_ops.c.s
+.PHONY : BSP/bsp_ops.s
+
+# target to generate assembly for a file
+BSP/bsp_ops.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\zxx-RM-A-Template.elf.dir\build.make CMakeFiles/zxx-RM-A-Template.elf.dir/BSP/bsp_ops.c.s
+.PHONY : BSP/bsp_ops.c.s
+
 BSP/bsp_power_ctrl.obj: BSP/bsp_power_ctrl.c.obj
 .PHONY : BSP/bsp_power_ctrl.obj
 
@@ -1579,6 +1603,9 @@ help:
 	@echo ... BSP/bsp_omni_chassis.obj
 	@echo ... BSP/bsp_omni_chassis.i
 	@echo ... BSP/bsp_omni_chassis.s
+	@echo ... BSP/bsp_ops.obj
+	@echo ... BSP/bsp_ops.i
+	@echo ... BSP/bsp_ops.s
 	@echo ... BSP/bsp_power_ctrl.obj
 	@echo ... BSP/bsp_power_ctrl.i
 	@echo ... BSP/bsp_power_ctrl.s

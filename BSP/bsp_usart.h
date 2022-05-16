@@ -1,7 +1,3 @@
-//
-// Created by 13763 on 2022/4/5.
-//
-
 #ifndef BSP_USART_H
 #define BSP_USART_H
 
@@ -23,8 +19,8 @@
 #define UART7_BUFFLEN 4
 #define UART7_MAX_LEN UART7_BUFFLEN*2
 
-//#define UART8_BUFFLEN 28
-//#define UART8_MAX_LEN UART8_BUFFLEN * 2
+#define UART8_BUFFLEN 28
+#define UART8_MAX_LEN UART8_BUFFLEN * 2
 
 /******** Struct ********/
 typedef struct
@@ -38,11 +34,11 @@ extern uint8_t usart1_buff[USART1_BUFFLEN];
 //extern uint8_t usart3_buff[USART3_BUFFLEN];
 //extern uint8_t usart6_buff[USART6_BUFFLEN];
 extern uint8_t uart7_buff[UART7_BUFFLEN];
-//extern uint8_t uart8_buff[UART8_BUFFLEN];
+extern uint8_t uart8_buff[UART8_BUFFLEN];
 extern rc_rx_t rc_rx;
 /******** Function *********/
 void Usart_IdleIRQ_Init(UART_HandleTypeDef *huart);
 void Usart_IdleIRQ_Handler(UART_HandleTypeDef *huart);
 void Usart_IdleIRQ_Callback(UART_HandleTypeDef *huart);
 
-#endif //ZXX_RM_A_TEMPLATE_BSP_USART_H
+#endif
